@@ -1,0 +1,1014 @@
+/* =========================================================
+   MAMOMA INTERIJERI - GLAVNI CSS
+
+   Sadržaj:
+   01. CSS varijable
+   02. Reset i osnovne postavke
+   03. Utility klase
+   04. Header, logo i navigacija
+   05. Hero sekcija
+   06. O nama
+   07. Usluge
+   08. CTA sekcija
+   09. Prednosti
+   10. Proces rada
+   11. Vrste prostora
+   12. Galerija
+   13. Česta pitanja
+   14. Kontakt
+   15. Footer
+   16. Responzivnost
+   ========================================================= */
+
+
+/* =========================================================
+   01. CSS VARIJABLE
+   ========================================================= */
+
+:root {
+    --color-dark: #2b2723;
+    --color-dark-menu: #111722;
+    --color-bg: #f8f4ef;
+    --color-white: #ffffff;
+    --color-text-muted: #5f554c;
+    --color-gold: #9b6b43;
+    --color-gold-light: #d8b98f;
+    --color-gold-dark: #7b5131;
+
+    --shadow-soft: 0 20px 60px rgba(43, 39, 35, 0.08);
+    --shadow-card: 0 24px 60px rgba(43, 39, 35, 0.12);
+
+    --radius-small: 14px;
+    --radius-medium: 22px;
+    --radius-large: 24px;
+    --container-width: 1120px;
+}
+
+
+/* =========================================================
+   02. RESET I OSNOVNE POSTAVKE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   03. UTILITY KLASE
+   ========================================================= */
+
+.container {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-label {
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 46px;
+}
+
+.section-heading h2,
+.about h2,
+.contact-info h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+    color: var(--color-dark);
+}
+
+.section-heading p {
+    color: var(--color-text-muted);
+}
+
+.btn-primary {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-gold-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   04. HEADER, LOGO I NAVIGACIJA
+   ========================================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.site-header.scrolled {
+    background-color: rgba(248, 244, 239, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(43, 39, 35, 0.08);
+    box-shadow: 0 12px 35px rgba(43, 39, 35, 0.08);
+}
+
+.header-container {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--color-white);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.logo-symbol {
+    width: 88px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.logo-text strong {
+    color: var(--color-gold-light);
+    font-weight: 500;
+}
+
+.site-header.scrolled .logo-text {
+    color: var(--color-dark);
+}
+
+.site-header.scrolled .logo-text strong {
+    color: var(--color-gold);
+}
+
+/* Desktop navigacija */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.main-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-gold-light);
+}
+
+.site-header.scrolled .main-nav a {
+    color: var(--color-dark);
+}
+
+.site-header.scrolled .main-nav a:hover {
+    color: var(--color-gold);
+}
+
+/* CTA gumb u mobilnom meniju - skriven na desktopu */
+.mobile-menu-cta {
+    display: none;
+}
+
+/* Hamburger gumb */
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: var(--color-white);
+    margin: 6px auto;
+    border-radius: 999px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.site-header.scrolled .menu-toggle span {
+    background-color: var(--color-dark);
+}
+
+.menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   05. HERO SEKCIJA
+   ========================================================= */
+
+.hero {
+    min-height: 85vh;
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.55)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 720px;
+    color: var(--color-white);
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: var(--color-gold-light);
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    max-width: 610px;
+    margin-bottom: 34px;
+    color: #f4eee7;
+}
+
+
+/* =========================================================
+   06. O NAMA
+   ========================================================= */
+
+.about {
+    background-color: var(--color-bg);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text p:last-child {
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+}
+
+.about-card {
+    background-color: var(--color-white);
+    padding: 38px;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(155, 107, 67, 0.12);
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--color-dark);
+}
+
+.about-card p {
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   07. USLUGE
+   ========================================================= */
+
+.services {
+    background-color: var(--color-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.service-card {
+    background-color: var(--color-bg);
+    padding: 34px;
+    border-radius: var(--radius-large);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card);
+}
+
+.service-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+    color: var(--color-dark);
+}
+
+.service-card p {
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   08. CTA SEKCIJA
+   ========================================================= */
+
+.cta-section {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 70px 0;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta-container h2 {
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--color-white);
+}
+
+.cta-container p {
+    max-width: 720px;
+    color: #e8ded2;
+}
+
+.cta-container .section-label {
+    color: var(--color-gold-light);
+}
+
+
+/* =========================================================
+   09. PREDNOSTI
+   ========================================================= */
+
+.features {
+    background-color: var(--color-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    box-shadow: 0 18px 45px rgba(43, 39, 35, 0.06);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--color-dark);
+}
+
+.feature-card p {
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   10. PROCES RADA
+   ========================================================= */
+
+.process {
+    background-color: var(--color-white);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.process-step {
+    background-color: var(--color-bg);
+    padding: 28px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+}
+
+.process-step span {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.process-step h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    color: var(--color-dark);
+}
+
+.process-step p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   11. VRSTE PROSTORA
+   ========================================================= */
+
+.spaces {
+    background-color: var(--color-bg);
+}
+
+.spaces-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.space-card {
+    min-height: 230px;
+    background-color: var(--color-white);
+    padding: 32px;
+    border-radius: var(--radius-large);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    transition: all 0.3s ease;
+}
+
+.space-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(43, 39, 35, 0.1);
+}
+
+.space-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+    color: var(--color-dark);
+}
+
+.space-card p {
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   12. GALERIJA
+   ========================================================= */
+
+.gallery {
+    background-color: var(--color-bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-card {
+    position: relative;
+    min-height: 260px;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    margin: 0;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.65);
+}
+
+.gallery-card figcaption {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   13. ČESTA PITANJA
+   ========================================================= */
+
+.faq {
+    background-color: var(--color-bg);
+}
+
+.faq-list {
+    display: grid;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: var(--color-white);
+    border-radius: 18px;
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    padding: 22px 26px;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-dark);
+    font-size: 1.05rem;
+}
+
+.faq-item summary::marker {
+    color: var(--color-gold);
+}
+
+.faq-item p {
+    margin-top: 14px;
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   14. KONTAKT
+   ========================================================= */
+
+.contact {
+    background-color: var(--color-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.contact-info p {
+    color: var(--color-text-muted);
+}
+
+.contact-details {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(43, 39, 35, 0.12);
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Instagram link */
+.instagram-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.instagram-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-contact a:hover {
+    color: var(--color-gold-dark);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.instagram-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* Kontakt forma */
+.contact-form {
+    background-color: var(--color-bg);
+    padding: 36px;
+    border-radius: var(--radius-large);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid rgba(43, 39, 35, 0.14);
+    border-radius: var(--radius-small);
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 4px rgba(155, 107, 67, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =========================================================
+   15. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background-color: var(--color-dark);
+    color: var(--color-bg);
+    padding: 28px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.site-footer p:last-child {
+    color: var(--color-gold-light);
+}
+
+
+/* =========================================================
+   16. RESPONZIVNOST
+   ========================================================= */
+
+/* Manji laptopi */
+@media (max-width: 1100px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-step:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* Tableti */
+@media (max-width: 992px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid,
+    .spaces-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mobiteli i manji tableti */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .header-container {
+        min-height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .logo-symbol {
+        width: 66px;
+    }
+
+    .logo-text {
+        font-size: 0.95rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-dark-menu);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 26px 5% 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.28);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-16px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .main-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .main-nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+
+    .main-nav a,
+    .site-header.scrolled .main-nav a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        color: var(--color-white);
+        font-size: 1rem;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .main-nav a:hover,
+    .site-header.scrolled .main-nav a:hover {
+        color: var(--color-gold-light);
+    }
+
+    .mobile-menu-cta {
+        display: inline-block;
+        width: auto;
+        margin-top: 22px;
+        padding: 12px 18px !important;
+        background-color: var(--color-gold);
+        color: var(--color-white) !important;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        border-bottom: none !important;
+    }
+
+    .mobile-menu-cta:hover {
+        background-color: var(--color-gold-dark);
+        color: var(--color-white) !important;
+        text-decoration: none;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .hero {
+        min-height: 78vh;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .features-grid,
+    .spaces-grid,
+    .process-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step:last-child {
+        grid-column: auto;
+    }
+
+    .contact-form {
+        padding: 26px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mali mobiteli */
+@media (max-width: 480px) {
+    .logo-symbol {
+        width: 56px;
+    }
+
+    .logo-text {
+        font-size: 0.82rem;
+        letter-spacing: 0.2px;
+    }
+
+    .main-nav {
+        top: 68px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-card,
+    .service-card,
+    .feature-card,
+    .process-step,
+    .space-card,
+    .faq-item,
+    .contact-form {
+        border-radius: 18px;
+        padding: 24px;
+    }
+}
