@@ -131,6 +131,40 @@ svg {
     transform: translateY(-2px);
 }
 
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 14px 26px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-gold);
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--color-gold);
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+}
+
 
 /* =========================================================
    04. HEADER, LOGO I NAVIGACIJA
@@ -303,6 +337,7 @@ svg {
 .hero-content {
     max-width: 720px;
     color: var(--color-white);
+    padding-top: 90px; /* prostor zbog fiksnog headera */
 }
 
 .hero-subtitle {
@@ -325,6 +360,30 @@ svg {
     max-width: 610px;
     margin-bottom: 34px;
     color: #f4eee7;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.hero-badges span {
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
 }
 
 
@@ -570,8 +629,47 @@ svg {
 }
 
 
+
 /* =========================================================
-   12. GALERIJA
+   12. SPECIJALIZACIJE
+   ========================================================= */
+
+.specializations {
+    background-color: var(--color-white);
+}
+
+.specializations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.specialization-card {
+    background-color: var(--color-bg);
+    padding: 30px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    transition: all 0.3s ease;
+}
+
+.specialization-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(43, 39, 35, 0.1);
+}
+
+.specialization-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--color-dark);
+}
+
+.specialization-card p {
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   13. GALERIJA
    ========================================================= */
 
 .gallery {
@@ -615,9 +713,13 @@ svg {
     font-weight: 700;
 }
 
+.gallery-actions {
+    margin-top: 34px;
+}
+
 
 /* =========================================================
-   13. ČESTA PITANJA
+   14. ČESTA PITANJA
    ========================================================= */
 
 .faq {
@@ -654,7 +756,7 @@ svg {
 
 
 /* =========================================================
-   14. KONTAKT
+   15. KONTAKT
    ========================================================= */
 
 .contact {
@@ -723,6 +825,14 @@ svg {
     flex-shrink: 0;
 }
 
+/* Brzi kontakt gumbi */
+.contact-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+}
+
 /* Kontakt forma */
 .contact-form {
     background-color: var(--color-bg);
@@ -744,7 +854,8 @@ svg {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     border: 1px solid rgba(43, 39, 35, 0.14);
     border-radius: var(--radius-small);
@@ -758,7 +869,8 @@ svg {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     border-color: var(--color-gold);
     box-shadow: 0 0 0 4px rgba(155, 107, 67, 0.12);
 }
@@ -768,8 +880,46 @@ svg {
 }
 
 
+
 /* =========================================================
-   15. FOOTER
+   PREMIUM HOVER DETALJ ZA KARTICE
+   ========================================================= */
+
+.service-card,
+.feature-card,
+.space-card,
+.process-step,
+.specialization-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before,
+.feature-card::before,
+.space-card::before,
+.process-step::before,
+.specialization-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background-color: var(--color-gold);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before,
+.feature-card:hover::before,
+.space-card:hover::before,
+.process-step:hover::before,
+.specialization-card:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* =========================================================
+   16. FOOTER
    ========================================================= */
 
 .site-footer {
@@ -792,7 +942,16 @@ svg {
 
 
 /* =========================================================
-   16. RESPONZIVNOST
+   17. MOBILNI FLOATING GUMB
+   ========================================================= */
+
+.mobile-floating-call {
+    display: none;
+}
+
+
+/* =========================================================
+   18. RESPONZIVNOST
    ========================================================= */
 
 /* Manji laptopi */
@@ -818,7 +977,8 @@ svg {
     }
 
     .features-grid,
-    .spaces-grid {
+    .spaces-grid,
+    .specializations-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -934,19 +1094,64 @@ svg {
         overflow: hidden;
     }
 
-    .hero {
-        min-height: 78vh;
-        text-align: center;
+    body {
+        padding-bottom: 72px;
     }
 
-    .hero-content {
-        margin: 0 auto;
+    .hero {
+		min-height: 100svh;
+		text-align: center;
+		align-items: flex-start;
+		padding-top: 110px;
+		padding-bottom: 90px;
+	}
+
+	.hero-content {
+		margin: 0 auto;
+		padding-top: 0;
+	}
+
+	.hero-subtitle {
+		font-size: 0.72rem;
+		letter-spacing: 3px;
+		margin-bottom: 14px;
+	}
+
+	.hero h1 {
+		font-size: clamp(2.15rem, 10vw, 3.2rem);
+		line-height: 1.05;
+		margin-bottom: 22px;
+	}
+
+	.hero-text {
+		font-size: 1rem;
+		line-height: 1.55;
+		margin-bottom: 26px;
+	}
+
+	.hero-actions {
+		justify-content: center;
+		gap: 12px;
+	}
+
+	.hero-badges {
+		justify-content: center;
+		margin-top: 22px;
+	}
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-badges {
+        justify-content: center;
     }
 
     .features-grid,
     .spaces-grid,
     .process-grid,
-    .gallery-grid {
+    .gallery-grid,
+    .specializations-grid {
         grid-template-columns: 1fr;
     }
 
@@ -962,17 +1167,48 @@ svg {
         flex-direction: column;
         text-align: center;
     }
+
+    .mobile-floating-call {
+		position: fixed;
+		left: 5%;
+		right: 5%;
+		bottom: 16px;
+		z-index: 1200;
+		display: block;
+		text-align: center;
+		background-color: var(--color-gold);
+		color: var(--color-white);
+		text-decoration: none;
+		padding: 14px 18px;
+		border-radius: 999px;
+		font-weight: 800;
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(16px);
+		transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+	}
+
+	.mobile-floating-call.is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
 }
 
 /* Mali mobiteli */
 @media (max-width: 480px) {
     .logo-symbol {
-        width: 56px;
+        width: 48px;
     }
 
     .logo-text {
-        font-size: 0.82rem;
-        letter-spacing: 0.2px;
+		font-size: 0.78rem;
+		letter-spacing: 0.1px;
+	}
+
+    .logo-company-type {
+        display: none;
     }
 
     .main-nav {
@@ -988,17 +1224,47 @@ svg {
         width: 24px;
     }
 
-    .hero h1 {
-        font-size: 2.35rem;
-    }
+    .hero {
+		padding-top: 105px;
+		padding-bottom: 100px;
+	}
 
-    .hero-text {
-        font-size: 1rem;
-    }
+	.hero-subtitle {
+		font-size: 0.68rem;
+		letter-spacing: 2.5px;
+	}
 
-    .btn-primary {
+	.hero h1 {
+		font-size: clamp(2rem, 11vw, 2.7rem);
+		line-height: 1.05;
+		margin-bottom: 20px;
+	}
+
+	.hero-text {
+		font-size: 0.98rem;
+		line-height: 1.55;
+	}
+
+	.hero-badges span {
+		font-size: 0.82rem;
+		padding: 7px 12px;
+	}
+
+    .btn-primary,
+	.btn-secondary,
+	.btn-outline {
+		width: auto;
+		text-align: center;
+	}
+
+	.hero-actions .btn-primary,
+	.hero-actions .btn-secondary {
+		width: 100%;
+	}
+
+    .hero-actions,
+    .contact-actions {
         width: 100%;
-        text-align: center;
     }
 
     .about-card,
@@ -1006,6 +1272,7 @@ svg {
     .feature-card,
     .process-step,
     .space-card,
+    .specialization-card,
     .faq-item,
     .contact-form {
         border-radius: 18px;
