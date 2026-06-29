@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mamoma-interijeri.hr/sitemap.xml
+Sitemap: https://www.mamoma.hr/sitemap.xml
