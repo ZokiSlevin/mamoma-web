@@ -13,11 +13,14 @@
    09. Prednosti
    10. Proces rada
    11. Vrste prostora
-   12. Galerija
-   13. Česta pitanja
-   14. Kontakt
-   15. Footer
-   16. Responzivnost
+   12. Specijalizacije
+   13. Galerija
+   14. Česta pitanja
+   15. Kontakt
+   16. Premium hover detalj za kartice
+   17. Footer
+   18. Mobilni floating gumb
+   19. Responzivnost
    ========================================================= */
 
 
@@ -565,21 +568,38 @@ svg {
     border: 1px solid rgba(43, 39, 35, 0.08);
 }
 
-.process-step span {
+.process-number {
     display: inline-flex;
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 2px;
     background-color: var(--color-gold);
     color: var(--color-white);
     border-radius: 50%;
     font-weight: 700;
     margin-bottom: 20px;
+    box-shadow: 0 12px 30px rgba(155, 107, 67, 0.22);
+}
+
+.process-number small {
+    font-size: 0.72rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.process-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    display: block;
 }
 
 .process-step h3 {
     font-size: 1.15rem;
+    margin-top: 2px;
     margin-bottom: 12px;
     color: var(--color-dark);
 }
@@ -627,7 +647,6 @@ svg {
 .space-card p {
     color: var(--color-text-muted);
 }
-
 
 
 /* =========================================================
@@ -880,9 +899,8 @@ svg {
 }
 
 
-
 /* =========================================================
-   PREMIUM HOVER DETALJ ZA KARTICE
+   16. PREMIUM HOVER DETALJ ZA KARTICE
    ========================================================= */
 
 .service-card,
@@ -919,7 +937,7 @@ svg {
 
 
 /* =========================================================
-   16. FOOTER
+   17. FOOTER
    ========================================================= */
 
 .site-footer {
@@ -942,7 +960,7 @@ svg {
 
 
 /* =========================================================
-   17. MOBILNI FLOATING GUMB
+   18. MOBILNI FLOATING GUMB
    ========================================================= */
 
 .mobile-floating-call {
@@ -951,7 +969,7 @@ svg {
 
 
 /* =========================================================
-   18. RESPONZIVNOST
+   19. RESPONZIVNOST
    ========================================================= */
 
 /* Manji laptopi */
@@ -1099,52 +1117,44 @@ svg {
     }
 
     .hero {
-		min-height: 100svh;
-		text-align: center;
-		align-items: flex-start;
-		padding-top: 110px;
-		padding-bottom: 90px;
-	}
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 110px;
+        padding-bottom: 90px;
+    }
 
-	.hero-content {
-		margin: 0 auto;
-		padding-top: 0;
-	}
+    .hero-content {
+        margin: 0 auto;
+        padding-top: 0;
+    }
 
-	.hero-subtitle {
-		font-size: 0.72rem;
-		letter-spacing: 3px;
-		margin-bottom: 14px;
-	}
+    .hero-subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
 
-	.hero h1 {
-		font-size: clamp(2.15rem, 10vw, 3.2rem);
-		line-height: 1.05;
-		margin-bottom: 22px;
-	}
+    .hero h1 {
+        font-size: clamp(2.15rem, 10vw, 3.2rem);
+        line-height: 1.05;
+        margin-bottom: 22px;
+    }
 
-	.hero-text {
-		font-size: 1rem;
-		line-height: 1.55;
-		margin-bottom: 26px;
-	}
-
-	.hero-actions {
-		justify-content: center;
-		gap: 12px;
-	}
-
-	.hero-badges {
-		justify-content: center;
-		margin-top: 22px;
-	}
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.55;
+        margin-bottom: 26px;
+    }
 
     .hero-actions {
         justify-content: center;
+        gap: 12px;
     }
 
     .hero-badges {
         justify-content: center;
+        margin-top: 22px;
     }
 
     .features-grid,
@@ -1169,31 +1179,31 @@ svg {
     }
 
     .mobile-floating-call {
-		position: fixed;
-		left: 5%;
-		right: 5%;
-		bottom: 16px;
-		z-index: 1200;
-		display: block;
-		text-align: center;
-		background-color: var(--color-gold);
-		color: var(--color-white);
-		text-decoration: none;
-		padding: 14px 18px;
-		border-radius: 999px;
-		font-weight: 800;
-		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(16px);
-		transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-	}
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        bottom: 16px;
+        z-index: 1200;
+        display: block;
+        text-align: center;
+        background-color: var(--color-gold);
+        color: var(--color-white);
+        text-decoration: none;
+        padding: 14px 18px;
+        border-radius: 999px;
+        font-weight: 800;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(16px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
 
-	.mobile-floating-call.is-visible {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-	}
+    .mobile-floating-call.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 /* Mali mobiteli */
@@ -1203,9 +1213,9 @@ svg {
     }
 
     .logo-text {
-		font-size: 0.78rem;
-		letter-spacing: 0.1px;
-	}
+        font-size: 0.78rem;
+        letter-spacing: 0.1px;
+    }
 
     .logo-company-type {
         display: none;
@@ -1225,42 +1235,42 @@ svg {
     }
 
     .hero {
-		padding-top: 105px;
-		padding-bottom: 100px;
-	}
+        padding-top: 105px;
+        padding-bottom: 100px;
+    }
 
-	.hero-subtitle {
-		font-size: 0.68rem;
-		letter-spacing: 2.5px;
-	}
+    .hero-subtitle {
+        font-size: 0.68rem;
+        letter-spacing: 2.5px;
+    }
 
-	.hero h1 {
-		font-size: clamp(2rem, 11vw, 2.7rem);
-		line-height: 1.05;
-		margin-bottom: 20px;
-	}
+    .hero h1 {
+        font-size: clamp(2rem, 11vw, 2.7rem);
+        line-height: 1.05;
+        margin-bottom: 20px;
+    }
 
-	.hero-text {
-		font-size: 0.98rem;
-		line-height: 1.55;
-	}
+    .hero-text {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
 
-	.hero-badges span {
-		font-size: 0.82rem;
-		padding: 7px 12px;
-	}
+    .hero-badges span {
+        font-size: 0.82rem;
+        padding: 7px 12px;
+    }
 
     .btn-primary,
-	.btn-secondary,
-	.btn-outline {
-		width: auto;
-		text-align: center;
-	}
+    .btn-secondary,
+    .btn-outline {
+        width: auto;
+        text-align: center;
+    }
 
-	.hero-actions .btn-primary,
-	.hero-actions .btn-secondary {
-		width: 100%;
-	}
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+    }
 
     .hero-actions,
     .contact-actions {
