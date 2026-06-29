@@ -736,6 +736,22 @@ svg {
     margin-top: 34px;
 }
 
+.gallery-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border-radius: var(--radius-large);
+}
+
+.gallery-link .gallery-card {
+    height: 100%;
+}
+
+.gallery-link:focus-visible {
+    outline: 3px solid var(--color-gold-light);
+    outline-offset: 4px;
+}
+
 
 /* =========================================================
    14. ČESTA PITANJA
@@ -1287,5 +1303,433 @@ svg {
     .contact-form {
         border-radius: 18px;
         padding: 24px;
+    }
+}
+
+/* =========================================================
+   20. PODSTRANICE KATEGORIJA
+   ========================================================= */
+
+.subpage-hero {
+    min-height: 72vh;
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        var(--subpage-image);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 80px;
+    color: var(--color-white);
+}
+
+.subpage-hero-content {
+    max-width: 780px;
+}
+
+.subpage-hero h1 {
+    font-size: clamp(2.6rem, 6vw, 5.1rem);
+    line-height: 1.04;
+    margin-bottom: 24px;
+}
+
+.subpage-hero p:not(.hero-subtitle) {
+    max-width: 680px;
+    color: #f4eee7;
+    font-size: 1.13rem;
+    margin-bottom: 30px;
+}
+
+.subpage-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 0.8fr;
+    gap: 54px;
+    align-items: start;
+}
+
+.subpage-main-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.subpage-main-text p {
+    color: var(--color-text-muted);
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+}
+
+.subpage-side-card {
+    background-color: var(--color-white);
+    padding: 34px;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(155, 107, 67, 0.12);
+}
+
+.subpage-side-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+}
+
+.subpage-side-card p {
+    color: var(--color-text-muted);
+    margin-bottom: 22px;
+}
+
+.subpage-features {
+    background-color: var(--color-white);
+}
+
+.subpage-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.subpage-feature-card {
+    background-color: var(--color-bg);
+    padding: 28px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subpage-feature-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background-color: var(--color-gold);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.subpage-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(43, 39, 35, 0.1);
+}
+
+.subpage-feature-card:hover::before {
+    transform: scaleY(1);
+}
+
+.subpage-feature-card h3 {
+    font-size: 1.16rem;
+    margin-bottom: 12px;
+}
+
+.subpage-feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.96rem;
+}
+
+.related-pages {
+    background-color: var(--color-bg);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.related-card {
+    display: block;
+    background-color: var(--color-white);
+    padding: 28px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(43, 39, 35, 0.08);
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(43, 39, 35, 0.1);
+}
+
+.related-card span {
+    display: block;
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.related-card p {
+    color: var(--color-text-muted);
+}
+
+.gallery-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border-radius: var(--radius-large);
+}
+
+.gallery-link:focus-visible {
+    outline: 3px solid var(--color-gold-light);
+    outline-offset: 4px;
+}
+
+/* Responzivnost za podstranice */
+@media (max-width: 992px) {
+    .subpage-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .subpage-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .subpage-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 112px;
+        padding-bottom: 80px;
+    }
+
+    .subpage-hero-content {
+        margin: 0 auto;
+    }
+
+    .subpage-hero h1 {
+        font-size: clamp(2.15rem, 10vw, 3.2rem);
+    }
+
+    .subpage-hero p:not(.hero-subtitle) {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subpage-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .subpage-hero {
+        padding-top: 105px;
+        padding-bottom: 92px;
+    }
+
+    .subpage-hero h1 {
+        font-size: clamp(2rem, 11vw, 2.7rem);
+    }
+
+    .subpage-side-card,
+    .subpage-feature-card,
+    .related-card {
+        border-radius: 18px;
+        padding: 24px;
+    }
+}
+
+
+/* =========================================================
+   21. GALERIJA NA PODSTRANICAMA + LIGHTBOX========================================================= */
+
+.project-gallery {
+    background-color: var(--color-bg);
+}
+
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-gallery-item {
+    display: block;
+    width: 100%;
+    height: 260px;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 18px 45px rgba(43, 39, 35, 0.08);
+}
+
+.project-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.85);
+}
+
+.project-gallery-item:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+/* Lightbox */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 90px;
+    background-color: rgba(17, 23, 34, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.gallery-lightbox-content {
+    width: min(1000px, 100%);
+    text-align: center;
+}
+
+.gallery-lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: var(--radius-large);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-lightbox-caption {
+    margin-top: 16px;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gallery-lightbox-close:hover {
+    transform: scale(1.06);
+    background-color: var(--color-gold-light);
+}
+
+.gallery-lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-dark);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gallery-lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.06);
+    background-color: var(--color-gold-light);
+}
+
+.gallery-lightbox-prev {
+    left: 28px;
+}
+
+.gallery-lightbox-next {
+    right: 28px;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Responzivnost galerije */
+@media (max-width: 992px) {
+    .project-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery-item {
+        height: 240px;
+    }
+
+    .gallery-lightbox {
+        padding: 70px 20px;
+    }
+
+    .gallery-lightbox-nav {
+        width: 44px;
+        height: 44px;
+        font-size: 1.6rem;
+    }
+
+    .gallery-lightbox-prev {
+        left: 12px;
+    }
+
+    .gallery-lightbox-next {
+        right: 12px;
+    }
+
+    .gallery-lightbox-close {
+        top: 18px;
+        right: 18px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .gallery-lightbox-image {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-gallery-item {
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .gallery-lightbox-image {
+        border-radius: 18px;
     }
 }
