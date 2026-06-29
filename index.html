@@ -42,9 +42,9 @@
 
     <!-- Ikone - dodaj datoteke u folder images ili prilagodi putanje -->
     <link rel="icon" href="images/favicon.ico?v=3" sizes="any">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=3">
 
     <!-- Povezivanje CSS datoteke iz foldera css -->
     <link rel="stylesheet" href="css/styles.css">
@@ -170,40 +170,40 @@
 
     <!-- HEADER / NAVIGACIJA -->
     <header class="site-header">
-		<div class="container header-container">
+        <div class="container header-container">
 
-			<!-- Logo tvrtke -->
-			<a href="#" class="logo" aria-label="Mamoma interijeri d.o.o. - početna stranica">
-				<img src="images/mamoma-symbol.png" alt="" class="logo-symbol">
-				<span class="logo-text">
-					MAMOMA <strong>INTERIJERI</strong> <span class="logo-company-type">d.o.o.</span>
-				</span>
-			</a>
+            <!-- Logo tvrtke -->
+            <a href="#" class="logo" aria-label="Mamoma interijeri d.o.o. - početna stranica">
+                <img src="images/mamoma-symbol.png" alt="" class="logo-symbol">
+                <span class="logo-text">
+                    MAMOMA <strong>INTERIJERI</strong> <span class="logo-company-type">d.o.o.</span>
+                </span>
+            </a>
 
-			<!-- Gumb za mobilni meni -->
-			<button class="menu-toggle" type="button" aria-label="Otvori navigacijski meni" aria-expanded="false">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
+            <!-- Gumb za mobilni meni -->
+            <button class="menu-toggle" type="button" aria-label="Otvori navigacijski meni" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-			<!-- Glavna navigacija -->
-			<nav class="main-nav" aria-label="Glavna navigacija">
-				<ul>
-					<li><a href="#o-nama">O nama</a></li>
-					<li><a href="#usluge">Usluge</a></li>
-					<li><a href="#prednosti">Prednosti</a></li>
-					<li><a href="#proces">Proces</a></li>
-					<li><a href="#galerija">Galerija</a></li>
-					<li><a href="#kontakt">Kontakt</a></li>
-				</ul>
+            <!-- Glavna navigacija -->
+            <nav class="main-nav" aria-label="Glavna navigacija">
+                <ul>
+                    <li><a href="#o-nama">O nama</a></li>
+                    <li><a href="#usluge">Usluge</a></li>
+                    <li><a href="#prednosti">Prednosti</a></li>
+                    <li><a href="#proces">Proces</a></li>
+                    <li><a href="#galerija">Galerija</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
 
-				<!-- CTA gumb u mobilnom meniju -->
-				<a href="#kontakt" class="mobile-menu-cta">Zatražite ponudu</a>
-			</nav>
+                <!-- CTA gumb u mobilnom meniju -->
+                <a href="#kontakt" class="mobile-menu-cta">Zatražite ponudu</a>
+            </nav>
 
-		</div>
-	</header>
+        </div>
+    </header>
 
     <!-- GLAVNI SADRŽAJ -->
     <main>
@@ -443,7 +443,12 @@
                 <div class="process-grid">
 
                     <article class="process-step">
-                        <span>01</span>
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 6.5 9.8 17.7 4 11.9l1.4-1.4 4.4 4.4L19.6 5.1 21 6.5Z"></path>
+                            </svg>
+                            <small>01</small>
+                        </span>
 
                         <h3>Kontakt i upit</h3>
 
@@ -454,7 +459,12 @@
                     </article>
 
                     <article class="process-step">
-                        <span>02</span>
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 5h18v14H3V5Zm2 2v10h14V7H5Zm2 2h6v2H7V9Zm0 4h10v2H7v-2Z"></path>
+                            </svg>
+                            <small>02</small>
+                        </span>
 
                         <h3>Izmjera prostora</h3>
 
@@ -465,7 +475,12 @@
                     </article>
 
                     <article class="process-step">
-                        <span>03</span>
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h5v2H8v-2Zm7.5 1.5 1.4 1.4-3.6 3.6-2.1-2.1 1.4-1.4.7.7 2.2-2.2Z"></path>
+                            </svg>
+                            <small>03</small>
+                        </span>
 
                         <h3>Prijedlog rješenja</h3>
 
@@ -476,7 +491,12 @@
                     </article>
 
                     <article class="process-step">
-                        <span>04</span>
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 20v-7.5l8-8 7.5 7.5-8 8H4Zm2-2h4.7l6-6L12 7.3l-6 6V18Zm11.7-7.3L13.3 6.3l1.5-1.5a2 2 0 0 1 2.8 0l1.6 1.6a2 2 0 0 1 0 2.8l-1.5 1.5Z"></path>
+                            </svg>
+                            <small>04</small>
+                        </span>
 
                         <h3>Izrada namještaja</h3>
 
@@ -487,7 +507,12 @@
                     </article>
 
                     <article class="process-step">
-                        <span>05</span>
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2 3 6v6c0 5 3.8 9.7 9 10 5.2-.3 9-5 9-10V6l-9-4Zm0 2.2L19 7.3V12c0 4-2.8 7.4-7 7.9-4.2-.5-7-3.9-7-7.9V7.3l7-3.1Zm4.6 5.4 1.4 1.4-6.7 6.7-3.8-3.8 1.4-1.4 2.4 2.4 5.3-5.3Z"></path>
+                            </svg>
+                            <small>05</small>
+                        </span>
 
                         <h3>Montaža i kontrola</h3>
 
@@ -642,43 +667,43 @@
 
                 <div class="gallery-grid">
 
-					<figure class="gallery-card">
-						<img 
-							src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=80" 
-							alt="Moderna kuhinja po mjeri u toplim drvenim tonovima"
-							loading="lazy"
-						>
-						<figcaption>Kuhinje po mjeri</figcaption>
-					</figure>
+                    <figure class="gallery-card">
+                        <img 
+                            src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=80" 
+                            alt="Moderna kuhinja po mjeri u toplim drvenim tonovima"
+                            loading="lazy"
+                        >
+                        <figcaption>Kuhinje po mjeri</figcaption>
+                    </figure>
 
-					<figure class="gallery-card">
-						<img 
-							src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" 
-							alt="Dnevni boravak s TV stijenom i namještajem po mjeri"
-							loading="lazy"
-						>
-						<figcaption>Dnevni boravci</figcaption>
-					</figure>
+                    <figure class="gallery-card">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" 
+                            alt="Dnevni boravak s TV stijenom i namještajem po mjeri"
+                            loading="lazy"
+                        >
+                        <figcaption>Dnevni boravci</figcaption>
+                    </figure>
 
-					<figure class="gallery-card">
-						<img 
-							src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" 
-							alt="Ugradbeni ormar po mjeri s elegantnim frontama"
-							loading="lazy"
-						>
-						<figcaption>Ugradbeni ormari</figcaption>
-					</figure>
+                    <figure class="gallery-card">
+                        <img 
+                            src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" 
+                            alt="Ugradbeni ormar po mjeri s elegantnim frontama"
+                            loading="lazy"
+                        >
+                        <figcaption>Ugradbeni ormari</figcaption>
+                    </figure>
 
-					<figure class="gallery-card">
-						<img 
-							src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" 
-							alt="Poslovni prostor opremljen namještajem po mjeri"
-							loading="lazy"
-						>
-						<figcaption>Poslovni prostori</figcaption>
-					</figure>
+                    <figure class="gallery-card">
+                        <img 
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" 
+                            alt="Poslovni prostor opremljen namještajem po mjeri"
+                            loading="lazy"
+                        >
+                        <figcaption>Poslovni prostori</figcaption>
+                    </figure>
 
-				</div>
+                </div>
 
                 <div class="gallery-actions">
                     <a href="#kontakt" class="btn-primary">Želim slično rješenje</a>
@@ -770,28 +795,28 @@
                     </p>
 
                     <div class="contact-details">
-						<p><strong>Mamoma interijeri d.o.o.</strong></p>
-						<p>OIB: 35164367579</p>
-						<p>E-mail: <a href="mailto:info@mamoma-interijeri.hr">info@mamoma-interijeri.hr</a></p>
-						<p>Telefon: <a href="tel:+385989438084">+385 98 943 8084</a></p>
-						<p>Lokacija: Sesvete, Hrvatska</p>
-						<p class="instagram-contact">
-							<span>Instagram:</span>
+                        <p><strong>Mamoma interijeri d.o.o.</strong></p>
+                        <p>OIB: 35164367579</p>
+                        <p>E-mail: <a href="mailto:info@mamoma-interijeri.hr">info@mamoma-interijeri.hr</a></p>
+                        <p>Telefon: <a href="tel:+385989438084">+385 98 943 8084</a></p>
+                        <p>Lokacija: Sesvete, Hrvatska</p>
+                        <p class="instagram-contact">
+                            <span>Instagram:</span>
 
-							<a 
-								href="https://www.instagram.com/mamomazg/" 
-								target="_blank" 
-								rel="noopener noreferrer me" 
-								aria-label="Instagram profil Mamoma interijeri"
-							>
-								<svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
-									<path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5Zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
-								</svg>
+                            <a 
+                                href="https://www.instagram.com/mamomazg/" 
+                                target="_blank" 
+                                rel="noopener noreferrer me" 
+                                aria-label="Instagram profil Mamoma interijeri"
+                            >
+                                <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5Zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
+                                </svg>
 
-								<span>@mamomazg</span>
-							</a>
-						</p>
-					</div>
+                                <span>@mamomazg</span>
+                            </a>
+                        </p>
+                    </div>
 
                     <div class="contact-actions">
                         <a href="tel:+385989438084" class="btn-primary">Nazovite nas</a>
@@ -853,67 +878,67 @@
         Nazovite nas
     </a>
 	
-	<!-- Skripta za navigaciju i promjenu izgleda headera kod scrollanja -->
-	<script>
-		const header = document.querySelector('.site-header');
-		const menuToggle = document.querySelector('.menu-toggle');
-		const mainNav = document.querySelector('.main-nav');
-		const navLinks = document.querySelectorAll('.main-nav a');
-		const floatingCall = document.querySelector('.mobile-floating-call');
+    <!-- Skripta za navigaciju i promjenu izgleda headera kod scrollanja -->
+    <script>
+        const header = document.querySelector('.site-header');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.main-nav a');
+        const floatingCall = document.querySelector('.mobile-floating-call');
 
-		function toggleHeaderBackground() {
-			if (window.scrollY > 60 || mainNav.classList.contains('is-open')) {
-				header.classList.add('scrolled');
-			} else {
-				header.classList.remove('scrolled');
-			}
-		}
+        function toggleHeaderBackground() {
+            if (window.scrollY > 60 || mainNav.classList.contains('is-open')) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
 
-		function toggleFloatingCall() {
-			if (!floatingCall) return;
+        function toggleFloatingCall() {
+            if (!floatingCall) return;
 
-			if (window.scrollY > 420) {
-				floatingCall.classList.add('is-visible');
-			} else {
-				floatingCall.classList.remove('is-visible');
-			}
-		}
+            if (window.scrollY > 420) {
+                floatingCall.classList.add('is-visible');
+            } else {
+                floatingCall.classList.remove('is-visible');
+            }
+        }
 
-		menuToggle.addEventListener('click', function () {
-			const isOpen = mainNav.classList.toggle('is-open');
+        menuToggle.addEventListener('click', function () {
+            const isOpen = mainNav.classList.toggle('is-open');
 
-			menuToggle.classList.toggle('is-active', isOpen);
-			menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.classList.toggle('is-active', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
 
-			document.body.classList.toggle('menu-open', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
 
-			if (isOpen) {
-				header.classList.add('scrolled');
-			} else {
-				toggleHeaderBackground();
-			}
-		});
+            if (isOpen) {
+                header.classList.add('scrolled');
+            } else {
+                toggleHeaderBackground();
+            }
+        });
 
-		navLinks.forEach(function (link) {
-			link.addEventListener('click', function () {
-				mainNav.classList.remove('is-open');
-				menuToggle.classList.remove('is-active');
-				menuToggle.setAttribute('aria-expanded', 'false');
-				document.body.classList.remove('menu-open');
-				toggleHeaderBackground();
-			});
-		});
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                mainNav.classList.remove('is-open');
+                menuToggle.classList.remove('is-active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
+                toggleHeaderBackground();
+            });
+        });
 
-		window.addEventListener('scroll', function () {
-			toggleHeaderBackground();
-			toggleFloatingCall();
-		});
+        window.addEventListener('scroll', function () {
+            toggleHeaderBackground();
+            toggleFloatingCall();
+        });
 
-		window.addEventListener('load', function () {
-			toggleHeaderBackground();
-			toggleFloatingCall();
-		});
-	</script>
+        window.addEventListener('load', function () {
+            toggleHeaderBackground();
+            toggleFloatingCall();
+        });
+    </script>
 
 </body>
 </html>
