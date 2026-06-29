@@ -176,7 +176,7 @@
 			<a href="#" class="logo" aria-label="Mamoma interijeri d.o.o. - početna stranica">
 				<img src="images/mamoma-symbol.png" alt="" class="logo-symbol">
 				<span class="logo-text">
-					MAMOMA <strong>INTERIJERI</strong> d.o.o.
+					MAMOMA <strong>INTERIJERI</strong> <span class="logo-company-type">d.o.o.</span>
 				</span>
 			</a>
 
@@ -221,9 +221,21 @@
                         za domove, apartmane, urede i poslovne prostore.
                     </p>
 
-                    <a href="#kontakt" class="btn-primary" aria-label="Zatražite besplatnu ponudu za namještaj po mjeri i dizajn interijera">
-						Zatražite besplatnu ponudu
-					</a>
+                    <div class="hero-actions">
+                        <a href="#kontakt" class="btn-primary" aria-label="Zatražite besplatnu ponudu za namještaj po mjeri i dizajn interijera">
+                            Zatražite besplatnu ponudu
+                        </a>
+
+                        <a href="#galerija" class="btn-secondary">
+                            Pogledajte radove
+                        </a>
+                    </div>
+
+                    <div class="hero-badges" aria-label="Glavne prednosti usluge">
+                        <span>Izmjera prostora</span>
+                        <span>3D vizualizacija</span>
+                        <span>Izrada i montaža</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -279,7 +291,7 @@
 
                     <!-- Usluga 1 -->
                     <article class="service-card">
-                        <div class="service-icon">01</div>
+                        <div class="service-icon">✦</div>
 
                         <h3>Namještaj po mjeri</h3>
 
@@ -291,7 +303,7 @@
 
                     <!-- Usluga 2 -->
                     <article class="service-card">
-                        <div class="service-icon">02</div>
+                        <div class="service-icon">3D</div>
 
                         <h3>3D dizajn interijera</h3>
 
@@ -303,7 +315,7 @@
 
                     <!-- Usluga 3 -->
                     <article class="service-card">
-                        <div class="service-icon">03</div>
+                        <div class="service-icon">✓</div>
 
                         <h3>Kompletno opremanje prostora</h3>
 
@@ -563,6 +575,57 @@
             </div>
         </section>
 
+        <!-- SPECIJALIZACIJE -->
+        <section class="specializations section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Specijalizacije</p>
+
+                    <h2>Specijalizirani smo za namještaj koji se uklapa u prostor</h2>
+
+                    <p>
+                        Od pojedinačnih elemenata do kompletnog opremanja — rješenja prilagođavamo
+                        dimenzijama, stilu i svakodnevnim potrebama korisnika.
+                    </p>
+                </div>
+
+                <div class="specializations-grid">
+
+                    <article class="specialization-card">
+                        <h3>Kuhinje po mjeri</h3>
+                        <p>Funkcionalne kuhinje prilagođene rasporedu prostora, navikama kuhanja i željenom stilu.</p>
+                    </article>
+
+                    <article class="specialization-card">
+                        <h3>Ugradbeni ormari</h3>
+                        <p>Ormari koji maksimalno koriste prostor i omogućuju urednu organizaciju doma.</p>
+                    </article>
+
+                    <article class="specialization-card">
+                        <h3>TV stijene</h3>
+                        <p>Elegantna rješenja za dnevne boravke s prostorom za pohranu i multimediju.</p>
+                    </article>
+
+                    <article class="specialization-card">
+                        <h3>Kupaonski namještaj</h3>
+                        <p>Namještaj prilagođen dimenzijama kupaonice, vlagi i svakodnevnoj uporabi.</p>
+                    </article>
+
+                    <article class="specialization-card">
+                        <h3>Predsoblja</h3>
+                        <p>Praktični elementi za odlaganje obuće, jakni i svakodnevnih stvari.</p>
+                    </article>
+
+                    <article class="specialization-card">
+                        <h3>Namještaj za apartmane</h3>
+                        <p>Izdržljiva i estetski usklađena rješenja za turističke i najamne prostore.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
         <!-- GALERIJA RADOVA -->
         <section id="galerija" class="gallery section-padding">
             <div class="container">
@@ -616,6 +679,10 @@
 					</figure>
 
 				</div>
+
+                <div class="gallery-actions">
+                    <a href="#kontakt" class="btn-primary">Želim slično rješenje</a>
+                </div>
 
             </div>
         </section>
@@ -725,6 +792,13 @@
 							</a>
 						</p>
 					</div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+385989438084" class="btn-primary">Nazovite nas</a>
+                        <a href="https://wa.me/385989438084" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                            WhatsApp upit
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Kontakt forma -->
@@ -738,6 +812,18 @@
                     <div class="form-group">
                         <label for="email">E-mail adresa</label>
                         <input type="email" id="email" name="email" placeholder="vasa@email.hr" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type">Vrsta projekta</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Odaberite vrstu projekta</option>
+                            <option value="kuhinja">Kuhinja po mjeri</option>
+                            <option value="ormari">Ormari po mjeri</option>
+                            <option value="3d-dizajn">3D dizajn interijera</option>
+                            <option value="opremanje">Kompletno opremanje prostora</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -761,6 +847,11 @@
             <p>Namještaj po mjeri | Dizajn interijera | Opremanje prostora</p>
         </div>
     </footer>
+
+    <!-- Fiksni mobilni gumb za brzi poziv -->
+    <a href="tel:+385989438084" class="mobile-floating-call">
+        Nazovite nas
+    </a>
 	
 	<!-- Skripta za navigaciju i promjenu izgleda headera kod scrollanja -->
 	<script>
@@ -768,12 +859,23 @@
 		const menuToggle = document.querySelector('.menu-toggle');
 		const mainNav = document.querySelector('.main-nav');
 		const navLinks = document.querySelectorAll('.main-nav a');
+		const floatingCall = document.querySelector('.mobile-floating-call');
 
 		function toggleHeaderBackground() {
 			if (window.scrollY > 60 || mainNav.classList.contains('is-open')) {
 				header.classList.add('scrolled');
 			} else {
 				header.classList.remove('scrolled');
+			}
+		}
+
+		function toggleFloatingCall() {
+			if (!floatingCall) return;
+
+			if (window.scrollY > 420) {
+				floatingCall.classList.add('is-visible');
+			} else {
+				floatingCall.classList.remove('is-visible');
 			}
 		}
 
@@ -802,8 +904,15 @@
 			});
 		});
 
-		window.addEventListener('scroll', toggleHeaderBackground);
-		window.addEventListener('load', toggleHeaderBackground);
+		window.addEventListener('scroll', function () {
+			toggleHeaderBackground();
+			toggleFloatingCall();
+		});
+
+		window.addEventListener('load', function () {
+			toggleHeaderBackground();
+			toggleFloatingCall();
+		});
 	</script>
 
 </body>
