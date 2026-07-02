@@ -932,6 +932,112 @@
                 showNextGalleryImage();
             }
         });
+		
+		/* Swipe podrška za touch ekrane */
+		let touchStartX = 0;
+		let touchStartY = 0;
+		let touchEndX = 0;
+		let touchEndY = 0;
+
+		function isTouchDevice() {
+			return window.matchMedia('(pointer: coarse)').matches;
+		}
+
+		if (galleryLightbox && isTouchDevice()) {
+			galleryLightbox.addEventListener('touchstart', function (event) {
+				if (!galleryLightbox.classList.contains('is-open')) return;
+
+				touchStartX = event.changedTouches[0].screenX;
+				touchStartY = event.changedTouches[0].screenY;
+			}, { passive: true });
+
+			galleryLightbox.addEventListener('touchend', function (event) {
+				if (!galleryLightbox.classList.contains('is-open')) return;
+
+				touchEndX = event.changedTouches[0].screenX;
+				touchEndY = event.changedTouches[0].screenY;
+
+				handleGallerySwipe();
+			}, { passive: true });
+		}
+
+		function handleGallerySwipe() {
+			const swipeDistanceX = touchEndX - touchStartX;
+			const swipeDistanceY = touchEndY - touchStartY;
+
+			const minimumSwipeDistance = 50;
+
+			/*
+				Ne reagiramo ako je korisnik više povukao gore/dolje nego lijevo/desno.
+				Tako izbjegavamo slučajno mijenjanje slike kod normalnog scrollanja.
+			*/
+			if (Math.abs(swipeDistanceY) > Math.abs(swipeDistanceX)) {
+				return;
+			}
+
+			if (Math.abs(swipeDistanceX) < minimumSwipeDistance) {
+				return;
+			}
+
+			if (swipeDistanceX < 0) {
+				showNextGalleryImage();
+			} else {
+				showPreviousGalleryImage();
+			}
+		}
+		
+		/* AJAX slanje kontakt forme */
+        const contactForms = document.querySelectorAll('.contact-form');
+
+        contactForms.forEach(function (form) {
+            const statusMessage = form.querySelector('.form-status-message');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            if (!statusMessage || !submitButton) return;
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                statusMessage.className = 'form-status-message';
+                statusMessage.textContent = '';
+                statusMessage.classList.remove('is-visible', 'is-success', 'is-error');
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Slanje...';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    statusMessage.textContent = data.message || 'Hvala! Vaš upit je poslan.';
+                    statusMessage.classList.add('is-visible');
+
+                    if (data.success) {
+                        statusMessage.classList.add('is-success');
+                        form.reset();
+
+                        setTimeout(function () {
+                            statusMessage.classList.remove('is-visible', 'is-success');
+                            statusMessage.textContent = '';
+                        }, 6000);
+                    } else {
+                        statusMessage.classList.add('is-error');
+                    }
+                })
+                .catch(function () {
+                    statusMessage.textContent = 'Nažalost, poruka trenutno nije poslana. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.';
+                    statusMessage.classList.add('is-visible', 'is-error');
+                })
+                .finally(function () {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Pošalji upit';
+                });
+            });
+        });
     </script>
 
 </body>
