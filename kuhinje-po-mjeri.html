@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="hr">
- <head>
+<head>
     <meta charset="UTF-8">
 
     <!-- Responzivnost za mobitele, tablete i računala -->
@@ -183,151 +183,188 @@
 }
     </script>
 </head>
- <body>
-  <!-- HEADER / NAVIGACIJA -->
-  <header class="site-header">
-   <div class="container header-container">
-    <a aria-label="Mamoma interijeri d.o.o. - početna stranica" class="logo" href="index.html">
-     <img alt="" class="logo-symbol" src="images/mamoma-symbol.png"/>
-     <span class="logo-text">
-      MAMOMA
-      <strong>
-       INTERIJERI
-      </strong>
-      <span class="logo-company-type">
-       d.o.o.
-      </span>
-     </span>
-    </a>
-    <button aria-expanded="false" aria-label="Otvori navigacijski meni" class="menu-toggle" type="button">
-     <span>
-     </span>
-     <span>
-     </span>
-     <span>
-     </span>
-    </button>
-    <nav aria-label="Glavna navigacija" class="main-nav">
-     <ul>
-      <li>
-       <a href="index.html#o-nama">
-        O nama
-       </a>
-      </li>
-      <li>
-       <a href="index.html#usluge">
-        Usluge
-       </a>
-      </li>
-      <li>
-       <a href="index.html#prednosti">
-        Prednosti
-       </a>
-      </li>
-      <li>
-       <a href="index.html#proces">
-        Proces
-       </a>
-      </li>
-      <li>
-       <a href="index.html#galerija">
-        Galerija
-       </a>
-      </li>
-      <li>
-       <a href="index.html#kontakt">
-        Kontakt
-       </a>
-      </li>
-     </ul>
-     <a class="mobile-menu-cta" href="index.html#kontakt">
-      Zatražite ponudu
-     </a>
-    </nav>
-   </div>
-  </header>
-  <main>
-   <section class="subpage-hero" style="--subpage-image: url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');">
-    <div class="container subpage-hero-content">
-     
+
+<body>
+
+    <!-- HEADER / NAVIGACIJA -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <!-- Logo tvrtke -->
+            <a href="index.html" class="logo" aria-label="Mamoma interijeri d.o.o. - početna stranica">
+                <img src="images/mamoma-symbol.png" alt="" class="logo-symbol">
+
+                <span class="logo-text">
+                    MAMOMA <strong>INTERIJERI</strong> <span class="logo-company-type">d.o.o.</span>
+                </span>
+            </a>
+
+            <!-- Gumb za mobilni meni -->
+            <button class="menu-toggle" type="button" aria-label="Otvori navigacijski meni" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Glavna navigacija -->
+            <nav class="main-nav" aria-label="Glavna navigacija">
+                <ul>
+                    <li><a href="index.html#o-nama">O nama</a></li>
+                    <li><a href="index.html#usluge">Usluge</a></li>
+                    <li><a href="index.html#prednosti">Prednosti</a></li>
+                    <li><a href="index.html#proces">Proces</a></li>
+                    <li><a href="index.html#galerija">Galerija</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+
+                    <li class="desktop-nav-cta"><a href="#kontakt" class="header-cta">Zatražite ponudu</a></li>
+                </ul>
+
+                <a href="index.html#kontakt" class="mobile-menu-cta">Zatražite ponudu</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- GLAVNI SADRŽAJ -->
+    <main>
+
+        <!-- HERO PODSTRANICE -->
+        <section class="subpage-hero kuhinje-hero">
+            <div class="container subpage-hero-content">
+
                 <nav class="breadcrumb-on-hero" aria-label="Putanja stranice">
                     <a href="index.html">Početna</a>
                     <span class="breadcrumb-separator">/</span>
                     <span class="breadcrumb-current">Kuhinje po mjeri</span>
                 </nav>
-                <p class="hero-subtitle">
-      Kuhinje po mjeri
-     </p>
-     <h1>
-      Kuhinja oblikovana prema vašem prostoru i svakodnevici.
-     </h1>
-     <p>
-      Kuhinja je jedan od najvažnijih prostora u domu. Zato svaku kuhinju planiramo prema stvarnim dimenzijama, načinu korištenja, željenom stilu i praktičnim potrebama korisnika.
-     </p>
-     <div class="hero-actions">
-      <a class="btn-primary" href="#kontakt">
-       Zatražite ponudu
-      </a>
-      <a class="btn-secondary" href="index.html#galerija">
-       Povratak na galeriju
-      </a>
-     </div>
-    </div>
-   </section>
-   <!-- GALERIJA KUHINJA -->
-   <section class="project-gallery section-padding">
-    <div class="container">
-     <div class="section-heading">
-      <p class="section-label">
-       Galerija kuhinja
-      </p>
-      <h2>
-       Inspiracija za kuhinje po mjeri
-      </h2>
-      <p>
-       Primjeri stilova, rasporeda i detalja koji mogu poslužiti kao inspiracija
-                za planiranje vaše kuhinje po mjeri.
-      </p>
-     </div>
-     <div class="project-gallery-grid">
-      <button aria-label="Otvori sliku kuhinje 1" class="project-gallery-item" data-gallery-index="0" type="button">
-       <img alt="Bijela kuhinja po mjeri s drvenim detaljima" loading="lazy" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-      <button aria-label="Otvori sliku kuhinje 2" class="project-gallery-item" data-gallery-index="1" type="button">
-       <img alt="Moderna kuhinja s otokom i svijetlim frontama" loading="lazy" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-      <button aria-label="Otvori sliku kuhinje 3" class="project-gallery-item" data-gallery-index="2" type="button">
-       <img alt="Kuhinja po mjeri s otvorenim policama" loading="lazy" src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-      <button aria-label="Otvori sliku kuhinje 4" class="project-gallery-item" data-gallery-index="3" type="button">
-       <img alt="Elegantna kuhinja s tamnim elementima" loading="lazy" src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-      <button aria-label="Otvori sliku kuhinje 5" class="project-gallery-item" data-gallery-index="4" type="button">
-       <img alt="Kuhinja s drvenim površinama i modernim detaljima" loading="lazy" src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-      <button aria-label="Otvori sliku kuhinje 6" class="project-gallery-item" data-gallery-index="5" type="button">
-       <img alt="Svijetla kuhinja po mjeri s funkcionalnim rasporedom" loading="lazy" src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-      </button>
-     </div>
-    </div>
-   </section>
-   <!-- LIGHTBOX ZA GALERIJU -->
-   <div aria-hidden="true" class="gallery-lightbox">
-    <button aria-label="Zatvori galeriju" class="gallery-lightbox-close" type="button">
-     ×
-    </button>
-    <button aria-label="Prethodna slika" class="gallery-lightbox-nav gallery-lightbox-prev" type="button">
-     ❮
-    </button>
-    <div class="gallery-lightbox-content">
-     <img alt="" class="gallery-lightbox-image" src=""/>
-     <p class="gallery-lightbox-caption">
-     </p>
-    </div>
-    <button aria-label="Sljedeća slika" class="gallery-lightbox-nav gallery-lightbox-next" type="button">
-     ❯
-    </button>
-   </div>
+
+                <p class="hero-subtitle">Kuhinje po mjeri</p>
+
+                <h1>Kuhinja oblikovana prema vašem prostoru i svakodnevici.</h1>
+
+                <p>
+                    Kuhinja je jedan od najvažnijih prostora u domu. Zato svaku kuhinju planiramo prema stvarnim dimenzijama, načinu korištenja, željenom stilu i praktičnim potrebama korisnika.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn-primary">Zatražite ponudu</a>
+                    <a href="index.html#galerija" class="btn-secondary">Povratak na galeriju</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIJA -->
+        <section class="project-gallery section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Galerija kuhinja</p>
+
+                    <h2>Inspiracija za kuhinje po mjeri</h2>
+
+                    <p>
+                        Primjeri stilova, rasporeda i detalja koji mogu poslužiti kao inspiracija za planiranje vaše kuhinje po mjeri.
+                    </p>
+                </div>
+
+                <div class="project-gallery-grid">
+
+					<button class="project-gallery-item" type="button" data-gallery-index="0" aria-label="Otvori sliku kuhinje 1">
+						<img
+							src="images/kuhinje/01_kuhinje.jpg"
+							alt="Kuhinja po mjeri s elegantnim frontama i drvenim dekorom"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="1" aria-label="Otvori sliku kuhinje 2">
+						<img
+							src="images/kuhinje/02_kuhinje.jpg"
+							alt="Moderna kuhinja po mjeri s radnom plohom i ugradbenim elementima"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="2" aria-label="Otvori sliku kuhinje 3">
+						<img
+							src="images/kuhinje/03_kuhinje.jpg"
+							alt="Detalj kuhinje po mjeri s prostorom za pohranu i radnom zonom"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="3" aria-label="Otvori sliku kuhinje 4">
+						<img
+							src="images/kuhinje/04_kuhinje.jpeg"
+							alt="Kuhinja i blagovaonica po mjeri u svijetlom interijeru"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="4" aria-label="Otvori sliku kuhinje 5">
+						<img
+							src="images/kuhinje/05_kuhinje.jpeg"
+							alt="Kuhinja po mjeri s pažljivo odabranim materijalima i detaljima"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="5" aria-label="Otvori sliku kuhinje 6">
+						<img
+							src="images/kuhinje/06_kuhinje.jpeg"
+							alt="Funkcionalna kuhinja po mjeri s modernim rasporedom elemenata"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="6" aria-label="Otvori sliku kuhinje 7">
+						<img
+							src="images/kuhinje/07_kuhinje.jpeg"
+							alt="Kuhinja po mjeri s elegantnim linijama i praktičnim rješenjima"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="7" aria-label="Otvori sliku kuhinje 8">
+						<img
+							src="images/kuhinje/08_kuhinje.jpeg"
+							alt="Detalj kuhinje po mjeri s kvalitetnom izvedbom i završnom obradom"
+							loading="lazy"
+						>
+					</button>
+
+					<button class="project-gallery-item" type="button" data-gallery-index="8" aria-label="Otvori sliku kuhinje 9">
+						<img
+							src="images/kuhinje/09_kuhinje.jpeg"
+							alt="Kuhinja po mjeri prilagođena prostoru i svakodnevnom korištenju"
+							loading="lazy"
+						>
+					</button>
+
+				</div>
+
+            </div>
+        </section>
+
+        <!-- LIGHTBOX ZA GALERIJU -->
+        <div class="gallery-lightbox" aria-hidden="true">
+            <button class="gallery-lightbox-close" type="button" aria-label="Zatvori galeriju">
+                &times;
+            </button>
+
+            <button class="gallery-lightbox-nav gallery-lightbox-prev" type="button" aria-label="Prethodna slika">
+                &#10094;
+            </button>
+
+            <div class="gallery-lightbox-content">
+                <img src="" alt="" class="gallery-lightbox-image">
+                <p class="gallery-lightbox-caption"></p>
+            </div>
+
+            <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Sljedeća slika">
+                &#10095;
+            </button>
+        </div>
 
         <!-- MINI CTA NAKON GALERIJE -->
         <section class="mini-cta">
@@ -341,35 +378,37 @@
             </div>
         </section>
 
-   <section class="subpage-content section-padding">
-    <div class="container subpage-layout">
-     <div class="subpage-main-text">
-      <p class="section-label">
-       Kuhinje po mjeri
-      </p>
-      <h2>
-       Rješenje prilagođeno prostoru i načinu korištenja
-      </h2>
-      <p>
-       Svaki projekt razvijamo individualno, prema dimenzijama prostora, željenom stilu, budžetu i svakodnevnim navikama korisnika.
-      </p>
-      <p>
-       Posebnu pažnju posvećujemo funkcionalnosti, trajnosti materijala, urednoj izvedbi i detaljima koji prostor čine ugodnim za korištenje.
-      </p>
-     </div>
-     <aside class="subpage-side-card">
-      <h3>
-       Zašto po mjeri?
-      </h3>
-      <p>
-       Namještaj po mjeri omogućuje bolje iskorištenje prostora, skladniji izgled i rješenje koje je prilagođeno vašim navikama.
-      </p>
-      <a class="btn-primary" href="#kontakt">
-       Pošaljite upit
-      </a>
-     </aside>
-    </div>
-   </section>
+        <!-- UVOD I GLAVNE PREDNOSTI -->
+        <section class="subpage-content section-padding">
+            <div class="container subpage-layout">
+
+                <div class="subpage-main-text">
+                    <p class="section-label">Kuhinje po mjeri</p>
+
+                    <h2>Rješenje prilagođeno prostoru i načinu korištenja</h2>
+
+                    <p>
+                        Svaki projekt razvijamo individualno, prema dimenzijama prostora, željenom stilu, budžetu i svakodnevnim navikama korisnika.
+                    </p>
+
+                    <p>
+                        Posebnu pažnju posvećujemo funkcionalnosti, trajnosti materijala, urednoj izvedbi i detaljima koji prostor čine ugodnim za korištenje.
+                    </p>
+                </div>
+
+                <aside class="subpage-side-card">
+                    <h3>Zašto po mjeri?</h3>
+
+                    <p>
+                        Namještaj po mjeri omogućuje bolje iskorištenje prostora,
+                        skladniji izgled i rješenje koje je prilagođeno vašim navikama.
+                    </p>
+
+                    <a href="#kontakt" class="btn-primary">Pošaljite upit</a>
+                </aside>
+
+            </div>
+        </section>
 
         <!-- ŠTO NAM POSLATI ZA PONUDU -->
         <section class="quote-prep section-padding">
@@ -389,7 +428,6 @@
                             <p>Pošaljite širinu, visinu i dubinu zidova te okvirni tlocrt kuhinje.</p>
                         </div>
                     </div>
-
                     <div class="quote-checklist-item">
                         <span>2</span>
                         <div>
@@ -397,7 +435,6 @@
                             <p>Slike prostora pomažu nam vidjeti zidove, prozore, vrata i tehničke detalje.</p>
                         </div>
                     </div>
-
                     <div class="quote-checklist-item">
                         <span>3</span>
                         <div>
@@ -405,7 +442,6 @@
                             <p>Korisne su informacije o vodi, odvodu, struji, napi i plinu ako postoji.</p>
                         </div>
                     </div>
-
                     <div class="quote-checklist-item">
                         <span>4</span>
                         <div>
@@ -413,7 +449,6 @@
                             <p>Navedite planirate li ugradbenu pećnicu, perilicu, hladnjak, ploču, napu i druge uređaje.</p>
                         </div>
                     </div>
-
                     <div class="quote-checklist-item">
                         <span>5</span>
                         <div>
@@ -426,326 +461,281 @@
             </div>
         </section>
 
-   <section class="subpage-features section-padding">
-    <div class="container">
-     <div class="section-heading">
-      <p class="section-label">
-       Detalji usluge
-      </p>
-      <h2>
-       Na što posebno obraćamo pažnju?
-      </h2>
-      <p>
-       Od prvog dogovora do montaže vodimo računa o praktičnosti, estetici i završnoj kvaliteti.
-      </p>
-     </div>
-     <div class="subpage-feature-grid">
-      <article class="subpage-feature-card">
-       <h3>
-        Pametan raspored elemenata
-       </h3>
-       <p>
-        Planiramo visoke elemente, radnu zonu, odlaganje, aparate i komunikaciju kroz prostor.
-       </p>
-      </article>
-      <article class="subpage-feature-card">
-       <h3>
-        Odabir materijala i dekora
-       </h3>
-       <p>
-        Pomažemo pri izboru fronti, radnih ploča, okova, ručkica i završnih detalja.
-       </p>
-      </article>
-      <article class="subpage-feature-card">
-       <h3>
-        Funkcionalna organizacija
-       </h3>
-       <p>
-        Predviđamo dovoljno prostora za pohranu, radnu površinu i svakodnevno korištenje kuhinje.
-       </p>
-      </article>
-      <article class="subpage-feature-card">
-       <h3>
-        3D prikaz prije izvedbe
-       </h3>
-       <p>
-        Po potrebi izrađujemo vizualizaciju kako biste jasnije vidjeli raspored, boje i materijale.
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <section class="process section-padding">
-    <div class="container">
-     <div class="section-heading">
-      <p class="section-label">
-       Kako radimo
-      </p>
-      <h2>
-       Proces od ideje do montaže
-      </h2>
-      <p>
-       Jasno definirani koraci olakšavaju dogovor i omogućuju kvalitetniju izvedbu.
-      </p>
-     </div>
-     <div class="process-grid">
-      <article class="process-step">
-       <span class="process-number">
-        <svg aria-hidden="true" class="process-icon" viewbox="0 0 24 24">
-         <path d="M21 6.5 9.8 17.7 4 11.9l1.4-1.4 4.4 4.4L19.6 5.1 21 6.5Z">
-         </path>
-        </svg>
-        <small>
-         01
-        </small>
-       </span>
-       <h3>
-        Kontakt
-       </h3>
-       <p>
-        Javljate nam se s osnovnim informacijama.
-       </p>
-      </article>
-      <article class="process-step">
-       <span class="process-number">
-        <svg aria-hidden="true" class="process-icon" viewbox="0 0 24 24">
-         <path d="M3 5h18v14H3V5Zm2 2v10h14V7H5Zm2 2h6v2H7V9Zm0 4h10v2H7v-2Z">
-         </path>
-        </svg>
-        <small>
-         02
-        </small>
-       </span>
-       <h3>
-        Izmjera
-       </h3>
-       <p>
-        Provjeravamo prostor i tehničke mogućnosti.
-       </p>
-      </article>
-      <article class="process-step">
-       <span class="process-number">
-        <svg aria-hidden="true" class="process-icon" viewbox="0 0 24 24">
-         <path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h5v2H8v-2Zm7.5 1.5 1.4 1.4-3.6 3.6-2.1-2.1 1.4-1.4.7.7 2.2-2.2Z">
-         </path>
-        </svg>
-        <small>
-         03
-        </small>
-       </span>
-       <h3>
-        Prijedlog
-       </h3>
-       <p>
-        Dogovaramo raspored, materijale i stil.
-       </p>
-      </article>
-      <article class="process-step">
-       <span class="process-number">
-        <svg aria-hidden="true" class="process-icon" viewbox="0 0 24 24">
-         <path d="M4 20v-7.5l8-8 7.5 7.5-8 8H4Zm2-2h4.7l6-6L12 7.3l-6 6V18Zm11.7-7.3L13.3 6.3l1.5-1.5a2 2 0 0 1 2.8 0l1.6 1.6a2 2 0 0 1 0 2.8l-1.5 1.5Z">
-         </path>
-        </svg>
-        <small>
-         04
-        </small>
-       </span>
-       <h3>
-        Izrada
-       </h3>
-       <p>
-        Izrađujemo elemente prema specifikaciji.
-       </p>
-      </article>
-      <article class="process-step">
-       <span class="process-number">
-        <svg aria-hidden="true" class="process-icon" viewbox="0 0 24 24">
-         <path d="M12 2 3 6v6c0 5 3.8 9.7 9 10 5.2-.3 9-5 9-10V6l-9-4Zm0 2.2L19 7.3V12c0 4-2.8 7.4-7 7.9-4.2-.5-7-3.9-7-7.9V7.3l7-3.1Zm4.6 5.4 1.4 1.4-6.7 6.7-3.8-3.8 1.4-1.4 2.4 2.4 5.3-5.3Z">
-         </path>
-        </svg>
-        <small>
-         05
-        </small>
-       </span>
-       <h3>
-        Montaža
-       </h3>
-       <p>
-        Montiramo i provjeravamo završne detalje.
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <section class="related-pages section-padding">
-    <div class="container">
-     <div class="section-heading">
-      <p class="section-label">
-       Još rješenja
-      </p>
-      <h2>
-       Pogledajte i ostale kategorije
-      </h2>
-     </div>
-     <div class="related-grid">
-      <a class="related-card" href="dnevni-boravci.html">
-       <span>
-        Dnevni boravci
-       </span>
-       <p>
-        TV stijene, komode i police.
-       </p>
-      </a>
-      <a class="related-card" href="ugradbeni-ormari.html">
-       <span>
-        Ugradbeni ormari
-       </span>
-       <p>
-        Pametna pohrana i maksimalno iskorišten prostor.
-       </p>
-      </a>
-      <a class="related-card" href="poslovni-prostori.html">
-       <span>
-        Poslovni prostori
-       </span>
-       <p>
-        Rješenja za urede, recepcije i salone.
-       </p>
-      </a>
-     </div>
-    </div>
-   </section>
-   <section class="contact section-padding" id="kontakt">
-    <div class="container contact-grid">
-     <div class="contact-info">
-      <p class="section-label">
-       Kontakt
-      </p>
-      <h2>
-       Želite rješenje prilagođeno vašem prostoru?
-      </h2>
-      <p>
-       Pošaljite nam osnovne informacije o prostoru, dimenzijama i željama. Rado ćemo vas kontaktirati i pripremiti prijedlog sljedećih koraka.
-      </p>
-      <div class="contact-details">
-       <p>
-        <strong>
-         Mamoma interijeri d.o.o.
-        </strong>
-       </p>
-       <p>
-        OIB: 35164367579
-       </p>
-       <p>
-        E-mail:
-        <a href="mailto:info@mamoma.hr">
-         info@mamoma.hr
-        </a>
-       </p>
-       <p>
-        Telefon:
-        <a href="tel:+385989438084">
-         +385 98 943 8084
-        </a>
-       </p>
-       <p>
-        Lokacija: Sesvete, Hrvatska
-       </p>
-       <p class="instagram-contact">
-        <span>
-         Instagram:
-        </span>
-        <a aria-label="Instagram profil Mamoma interijeri" href="https://www.instagram.com/mamomazg/" rel="noopener noreferrer me" target="_blank">
-         <svg aria-hidden="true" class="instagram-icon" viewbox="0 0 24 24">
-          <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5Zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z">
-          </path>
-         </svg>
-         <span>
-          @mamomazg
-         </span>
-        </a>
-       </p>
-      </div>
-      <div class="contact-actions">
-       <a class="btn-primary" href="tel:+385989438084">
+        <!-- DETALJI USLUGE -->
+        <section class="subpage-features section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Detalji usluge</p>
+
+                    <h2>Na što posebno obraćamo pažnju?</h2>
+
+                    <p>
+                        Od prvog dogovora do montaže vodimo računa o praktičnosti,
+                        estetici i završnoj kvaliteti.
+                    </p>
+                </div>
+
+                <div class="subpage-feature-grid">
+
+                    <article class="subpage-feature-card">
+                        <h3>Pametan raspored elemenata</h3>
+                        <p>Planiramo visoke elemente, radnu zonu, odlaganje, aparate i komunikaciju kroz prostor.</p>
+                    </article>
+                    <article class="subpage-feature-card">
+                        <h3>Odabir materijala i dekora</h3>
+                        <p>Pomažemo pri izboru fronti, radnih ploča, okova, ručkica i završnih detalja.</p>
+                    </article>
+                    <article class="subpage-feature-card">
+                        <h3>Funkcionalna organizacija</h3>
+                        <p>Predviđamo dovoljno prostora za pohranu, radnu površinu i svakodnevno korištenje kuhinje.</p>
+                    </article>
+                    <article class="subpage-feature-card">
+                        <h3>3D prikaz prije izvedbe</h3>
+                        <p>Po potrebi izrađujemo vizualizaciju kako biste jasnije vidjeli raspored, boje i materijale.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROCES -->
+        <section class="process section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Kako radimo</p>
+
+                    <h2>Proces od ideje do montaže</h2>
+
+                    <p>
+                        Jasno definirani koraci olakšavaju dogovor i omogućuju
+                        kvalitetniju izvedbu.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 6.5 9.8 17.7 4 11.9l1.4-1.4 4.4 4.4L19.6 5.1 21 6.5Z"></path>
+                            </svg>
+                            <small>01</small>
+                        </span>
+
+                        <h3>Kontakt</h3>
+                        <p>Javljate nam se s osnovnim informacijama.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 5h18v14H3V5Zm2 2v10h14V7H5Zm2 2h6v2H7V9Zm0 4h10v2H7v-2Z"></path>
+                            </svg>
+                            <small>02</small>
+                        </span>
+
+                        <h3>Izmjera</h3>
+                        <p>Provjeravamo prostor i tehničke mogućnosti.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h5v2H8v-2Zm7.5 1.5 1.4 1.4-3.6 3.6-2.1-2.1 1.4-1.4.7.7 2.2-2.2Z"></path>
+                            </svg>
+                            <small>03</small>
+                        </span>
+
+                        <h3>Prijedlog</h3>
+                        <p>Dogovaramo raspored, materijale i stil.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 20v-7.5l8-8 7.5 7.5-8 8H4Zm2-2h4.7l6-6L12 7.3l-6 6V18Zm11.7-7.3L13.3 6.3l1.5-1.5a2 2 0 0 1 2.8 0l1.6 1.6a2 2 0 0 1 0 2.8l-1.5 1.5Z"></path>
+                            </svg>
+                            <small>04</small>
+                        </span>
+
+                        <h3>Izrada</h3>
+                        <p>Izrađujemo elemente prema specifikaciji.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">
+                            <svg class="process-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2 3 6v6c0 5 3.8 9.7 9 10 5.2-.3 9-5 9-10V6l-9-4Zm0 2.2L19 7.3V12c0 4-2.8 7.4-7 7.9-4.2-.5-7-3.9-7-7.9V7.3l7-3.1Zm4.6 5.4 1.4 1.4-6.7 6.7-3.8-3.8 1.4-1.4 2.4 2.4 5.3-5.3Z"></path>
+                            </svg>
+                            <small>05</small>
+                        </span>
+
+                        <h3>Montaža</h3>
+                        <p>Montiramo i provjeravamo završne detalje.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- POVEZANE STRANICE -->
+        <section class="related-pages section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Još rješenja</p>
+                    <h2>Pogledajte i ostale kategorije</h2>
+                </div>
+
+                <div class="related-grid">
+
+                    <a href="dnevni-boravci.html" class="related-card">
+                        <span>Dnevni boravci</span>
+                        <p>TV stijene, komode i police.</p>
+                    </a>
+                    <a href="ugradbeni-ormari.html" class="related-card">
+                        <span>Ugradbeni ormari</span>
+                        <p>Pametna pohrana i maksimalno iskorišten prostor.</p>
+                    </a>
+                    <a href="poslovni-prostori.html" class="related-card">
+                        <span>Poslovni prostori</span>
+                        <p>Rješenja za urede, recepcije i salone.</p>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- KONTAKT -->
+        <section id="kontakt" class="contact section-padding">
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+                    <p class="section-label">Kontakt</p>
+
+                    <h2>Želite rješenje prilagođeno vašem prostoru?</h2>
+
+                    <p>
+                        Pošaljite nam osnovne informacije o prostoru, dimenzijama i željama.
+                        Rado ćemo vas kontaktirati i pripremiti prijedlog sljedećih koraka.
+                    </p>
+
+                    <div class="contact-details">
+                        <p><strong>Mamoma interijeri d.o.o.</strong></p>
+                        <p>OIB: 35164367579</p>
+                        <p>E-mail: <a href="mailto:info@mamoma.hr">info@mamoma.hr</a></p>
+                        <p>Telefon: <a href="tel:+385989438084">+385 98 943 8084</a></p>
+                        <p>Lokacija: Sesvete, Hrvatska</p>
+
+                        <p class="instagram-contact">
+                            <span>Instagram:</span>
+
+                            <a
+                                href="https://www.instagram.com/mamomazg/"
+                                target="_blank"
+                                rel="noopener noreferrer me"
+                                aria-label="Instagram profil Mamoma interijeri"
+                            >
+                                <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5Zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
+                                </svg>
+
+                                <span>@mamomazg</span>
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+385989438084" class="btn-primary">Nazovite nas</a>
+
+                        <a href="https://wa.me/385989438084?text=Pozdrav%2C%20zanima%20me%20ponuda%20za%20kuhinju%20po%20mjeri." class="btn-outline" target="_blank" rel="noopener noreferrer">
+                            WhatsApp upit
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kontakt forma -->
+                <form class="contact-form" action="send-mail.php" method="post">
+                    <p class="form-note">
+                        Pošaljite osnovne informacije o projektu, a mi ćemo vam se javiti s povratnim informacijama.
+                    </p>
+
+                    <!-- Skriveno polje za osnovnu zaštitu od botova -->
+                    <div style="display: none;">
+                        <label for="website">Web stranica</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Ime i prezime</label>
+                        <input type="text" id="name" name="name" placeholder="Vaše ime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail adresa</label>
+                        <input type="email" id="email" name="email" placeholder="vasa@email.hr" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type">Vrsta projekta</label>
+
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Odaberite vrstu projekta</option>
+                            <option value="kuhinja" selected>Kuhinja po mjeri</option>
+                            <option value="dnevni-boravak">Dnevni boravak</option>
+                            <option value="ormari">Ugradbeni ormari</option>
+                            <option value="poslovni-prostor">Poslovni prostor</option>
+                            <option value="3d-dizajn">3D dizajn interijera</option>
+                            <option value="opremanje">Kompletno opremanje prostora</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Poruka</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Opišite svoj projekt..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Pošalji upit</button>
+
+                    <p class="form-status-message" aria-live="polite"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Mamoma interijeri d.o.o. Sva prava pridržana.</p>
+
+            <p class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <span aria-hidden="true">|</span>
+                <a href="privatnost.html">Pravila privatnosti</a>
+                <span aria-hidden="true">|</span>
+                <a href="kolacici.html">Pravila kolačića</a>
+            </p>
+
+            <p>Namještaj po mjeri | Dizajn interijera | Opremanje prostora</p>
+        </div>
+    </footer>
+
+    <!-- Fiksni mobilni gumb za brzi poziv -->
+    <a href="tel:+385989438084" class="mobile-floating-call">
         Nazovite nas
-       </a>
-       <a class="btn-outline" href="https://wa.me/385989438084?text=Pozdrav%2C%20zanima%20me%20ponuda%20za%20kuhinju%20po%20mjeri." rel="noopener noreferrer" target="_blank">
-        WhatsApp upit
-       </a>
-      </div>
-     </div>
-     <!-- Kontakt forma -->
-	<form class="contact-form" action="send-mail.php" method="post">
-		<p class="form-note">
-			Pošaljite osnovne informacije o projektu, a mi ćemo vam se javiti s povratnim informacijama.
-		</p>
+    </a>
 
-		<!-- Skriveno polje za osnovnu zaštitu od botova -->
-		<div style="display: none;">
-			<label for="website">Web stranica</label>
-			<input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-		</div>
-
-		<div class="form-group">
-			<label for="name">Ime i prezime</label>
-			<input type="text" id="name" name="name" placeholder="Vaše ime" required>
-		</div>
-
-		<div class="form-group">
-			<label for="email">E-mail adresa</label>
-			<input type="email" id="email" name="email" placeholder="vasa@email.hr" required>
-		</div>
-
-		<div class="form-group">
-			<label for="project-type">Vrsta projekta</label>
-
-			<select id="project-type" name="project-type" required>
-				<option value="">Odaberite vrstu projekta</option>
-				<option value="kuhinja">Kuhinja po mjeri</option>
-				<option value="dnevni-boravak">Dnevni boravak</option>
-				<option value="ormari">Ugradbeni ormari</option>
-				<option value="poslovni-prostor">Poslovni prostor</option>
-				<option value="3d-dizajn">3D dizajn interijera</option>
-				<option value="opremanje">Kompletno opremanje prostora</option>
-				<option value="ostalo">Ostalo</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label for="message">Poruka</label>
-			<textarea id="message" name="message" rows="6" placeholder="Opišite svoj projekt..." required></textarea>
-		</div>
-
-		<button type="submit" class="btn-primary">Pošalji upit</button>
-
-		<p class="form-status-message" aria-live="polite"></p>
-	</form>
-    </div>
-   </section>
-  </main>
-  <!-- FOOTER -->
-	<footer class="site-footer">
-		<div class="container footer-container">
-			<p>&copy; 2026 Mamoma interijeri d.o.o. Sva prava pridržana.</p>
-
-			<p class="footer-links">
-				<a href="impressum.html">Impressum</a>
-				<span aria-hidden="true">|</span>
-				<a href="privatnost.html">Pravila privatnosti</a>
-				<span aria-hidden="true">|</span>
-				<a href="kolacici.html">Pravila kolačića</a>
-			</p>
-
-			<p>Namještaj po mjeri | Dizajn interijera | Opremanje prostora</p>
-		</div>
-	</footer>
-  <a class="mobile-floating-call" href="tel:+385989438084">
-   Nazovite nas
-  </a>
-  <!-- Skripta za navigaciju i promjenu izgleda headera kod scrollanja -->
-  <script>
-   const header = document.querySelector('.site-header');
+    <!-- Skripta za navigaciju, header, floating gumb i galeriju -->
+    <script>
+        const header = document.querySelector('.site-header');
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
         const navLinks = document.querySelectorAll('.main-nav a');
@@ -912,6 +902,60 @@
                 showNextGalleryImage();
             }
         });
-  </script>
- </body>
+
+        /* AJAX slanje kontakt forme */
+        const contactForms = document.querySelectorAll('.contact-form');
+
+        contactForms.forEach(function (form) {
+            const statusMessage = form.querySelector('.form-status-message');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            if (!statusMessage || !submitButton) return;
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                statusMessage.className = 'form-status-message';
+                statusMessage.textContent = '';
+                statusMessage.classList.remove('is-visible', 'is-success', 'is-error');
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Slanje...';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    statusMessage.textContent = data.message || 'Hvala! Vaš upit je poslan.';
+                    statusMessage.classList.add('is-visible');
+
+                    if (data.success) {
+                        statusMessage.classList.add('is-success');
+                        form.reset();
+
+                        setTimeout(function () {
+                            statusMessage.classList.remove('is-visible', 'is-success');
+                            statusMessage.textContent = '';
+                        }, 6000);
+                    } else {
+                        statusMessage.classList.add('is-error');
+                    }
+                })
+                .catch(function () {
+                    statusMessage.textContent = 'Nažalost, poruka trenutno nije poslana. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.';
+                    statusMessage.classList.add('is-visible', 'is-error');
+                })
+                .finally(function () {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Pošalji upit';
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
