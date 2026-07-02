@@ -326,7 +326,7 @@ svg {
     min-height: 85vh;
     background-image:
         linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.55)),
-        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80");
+        url("../images/pocetna/mamoma-pocetna-hero.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1001,6 +1001,33 @@ svg {
 
 /* Tableti */
 @media (max-width: 992px) {
+    .hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/pocetna/mamoma-pocetna-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    .hero-actions,
+    .hero-badges {
+        justify-content: center;
+    }
+
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1133,12 +1160,21 @@ svg {
     }
 
     .hero {
-        min-height: 100svh;
-        text-align: center;
-        align-items: flex-start;
-        padding-top: 110px;
-        padding-bottom: 90px;
-    }
+		min-height: 100svh;
+		text-align: center;
+		align-items: flex-start;
+		padding-top: 105px;
+		padding-bottom: 64px;
+
+		background-image:
+			linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+			url("../images/pocetna/mamoma-pocetna-hero-mobile.webp");
+
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-color: #d8d1c7;
+	}
 
     .hero-content {
         margin: 0 auto;
@@ -1251,9 +1287,19 @@ svg {
     }
 
     .hero {
-        padding-top: 105px;
-        padding-bottom: 100px;
-    }
+		min-height: 100svh;
+		padding-top: 96px;
+		padding-bottom: 54px;
+
+		background-image:
+			linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+			url("../images/pocetna/mamoma-pocetna-hero-mobile.webp");
+
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-color: #d8d1c7;
+	}
 
     .hero-subtitle {
         font-size: 0.68rem;
@@ -2008,4 +2054,239 @@ body.lightbox-open {
 .legal-content a {
     color: var(--color-gold);
     font-weight: 700;
+}
+
+/* =========================================================
+   KUHINJE - HERO SLIKA
+   ========================================================= */
+
+.kuhinje-hero {
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        url("../images/kuhinje/kuhinje-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet i mobitel */
+@media (max-width: 992px) {
+    .kuhinje-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/kuhinje/kuhinje-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+}
+
+@media (max-width: 768px) {
+    .kuhinje-hero {
+        padding-top: 105px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kuhinje-hero {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
+}
+
+/* =========================================================
+   DNEVNI BORAVCI - HERO SLIKA
+   ========================================================= */
+
+.dnevni-hero {
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        url("../images/dnevniboravci/dnevni-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet i mobitel */
+@media (max-width: 992px) {
+    .dnevni-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/dnevniboravci/dnevni-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+}
+
+@media (max-width: 768px) {
+    .dnevni-hero {
+        padding-top: 105px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dnevni-hero {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
+}
+
+/* =========================================================
+   ORMARI - HERO SLIKA
+   ========================================================= */
+
+.ormari-hero {
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        url("../images/ormari/ormari-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet i mobitel */
+@media (max-width: 992px) {
+    .ormari-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/ormari/ormari-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+}
+
+@media (max-width: 768px) {
+    .ormari-hero {
+        padding-top: 105px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ormari-hero {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
+}
+
+/* =========================================================
+   POSLOVNI PROSTORI - HERO SLIKA
+   ========================================================= */
+
+.poslovni-hero {
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        url("../images/poslovniprostori/poslovni-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet i mobitel */
+@media (max-width: 992px) {
+    .poslovni-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/poslovniprostori/poslovni-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+}
+
+@media (max-width: 768px) {
+    .poslovni-hero {
+        padding-top: 105px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poslovni-hero {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
+}
+
+/* =========================================================
+   KUPAONICE - HERO SLIKA
+   ========================================================= */
+
+.kupaonice-hero {
+    background-image:
+        linear-gradient(rgba(20, 18, 15, 0.52), rgba(20, 18, 15, 0.62)),
+        url("../images/kupaonice/kupaonice-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet i mobitel */
+@media (max-width: 992px) {
+    .kupaonice-hero {
+        min-height: 100svh;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: 115px;
+        padding-bottom: 70px;
+
+        background-image:
+            linear-gradient(rgba(20, 18, 15, 0.45), rgba(20, 18, 15, 0.62)),
+            url("../images/kupaonice/kupaonice-hero-mobile.webp");
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #d8d1c7;
+    }
+}
+
+@media (max-width: 768px) {
+    .kupaonice-hero {
+        padding-top: 105px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kupaonice-hero {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
 }
