@@ -8,7 +8,7 @@
 
     <!-- Osnovni SEO -->
     <title>Mamoma interijeri d.o.o. | Namještaj po mjeri Zagreb i Sesvete</title>
-    <meta name="description" content="Mamoma interijeri d.o.o. izrađuje namještaj po mjeri, kuhinje, ugradbene ormare, TV stijene i rješenja za stambene, apartmanske i poslovne prostore.">
+    <meta name="description" content="Namještaj po mjeri Zagreb i Sesvete: kuhinje, ugradbeni ormari, TV stijene, kupaonice, poslovni prostori, 3D dizajn, izrada i montaža.">
     <meta name="keywords" content="Mamoma interijeri, namještaj po mjeri, kuhinje po mjeri, ugradbeni ormari, TV stijene, dnevni boravci, poslovni prostori, dizajn interijera, 3D dizajn interijera, Zagreb, Sesvete">
     <meta name="author" content="Mamoma interijeri d.o.o.">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -216,17 +216,26 @@
             <nav class="main-nav" aria-label="Glavna navigacija">
                 <ul>
                     <li><a href="#o-nama">O nama</a></li>
-                    <li><a href="#usluge">Usluge</a></li>
-                    <li><a href="#prednosti">Prednosti</a></li>
+                    <li class="nav-has-dropdown">
+                        <a href="#usluge" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+							<span>Usluge</span>
+							<span class="dropdown-arrow-css" aria-hidden="true"></span>
+						</a>
+                        <ul class="nav-dropdown" aria-label="Podstranice usluga">
+                            <li><a href="kuhinje-po-mjeri.html">Kuhinje po mjeri</a></li>
+                            <li><a href="ugradbeni-ormari.html">Ugradbeni ormari</a></li>
+                            <li><a href="dnevni-boravci.html">Dnevni boravci</a></li>
+                            <li><a href="kupaonice.html">Kupaonice</a></li>
+                            <li><a href="poslovni-prostori.html">Poslovni prostori</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#proces">Proces</a></li>
                     <li><a href="#galerija">Galerija</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
-                
-                    <li class="desktop-nav-cta"><a href="#kontakt" class="header-cta">Zatražite ponudu</a></li>
+                    <li class="desktop-nav-cta"><a href="#ponuda" class="header-cta">Zatražite ponudu</a></li>
                 </ul>
 
-                <!-- CTA gumb u mobilnom meniju -->
-                <a href="#kontakt" class="mobile-menu-cta">Zatražite ponudu</a>
+                <a href="#ponuda" class="mobile-menu-cta">Zatražite ponudu</a>
             </nav>
 
         </div>
@@ -249,8 +258,8 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#kontakt" class="btn-primary" aria-label="Zatražite besplatnu ponudu za namještaj po mjeri i dizajn interijera">
-                            Zatražite besplatnu ponudu
+                        <a href="#ponuda" class="btn-primary" aria-label="Zatražite ponudu za namještaj po mjeri i dizajn interijera">
+                            Zatražite ponudu
                         </a>
 
                         <a href="#galerija" class="btn-secondary">
@@ -296,6 +305,24 @@
                     </p>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- BRZA NAVIGACIJA USLUGA -->
+        <section class="service-finder section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Odaberite prostor</p>
+                    <h2>Brzi put do rješenja koje tražite</h2>
+                    <p>Odaberite kategoriju i pogledajte primjere radova, detalje usluge i što nam možete poslati za bržu ponudu.</p>
+                </div>
+                <div class="service-finder-grid">
+                    <a href="kuhinje-po-mjeri.html" class="service-finder-card"><strong>Kuhinje</strong><span>Kuhinje po mjeri</span></a>
+                    <a href="ugradbeni-ormari.html" class="service-finder-card"><strong>Ormari</strong><span>Ugradbeni ormari i garderobe</span></a>
+                    <a href="dnevni-boravci.html" class="service-finder-card"><strong>Dnevni boravci</strong><span>TV stijene, komode i police</span></a>
+                    <a href="kupaonice.html" class="service-finder-card"><strong>Kupaonice</strong><span>Kupaonski namještaj po mjeri</span></a>
+                    <a href="poslovni-prostori.html" class="service-finder-card"><strong>Poslovno</strong><span>Uredi, saloni i recepcije</span></a>
+                </div>
             </div>
         </section>
 
@@ -691,65 +718,71 @@
 
                     <h2>Primjeri prostora koje možemo oblikovati</h2>
 
-                    <p>
-                        Ovdje kasnije možete dodati stvarne fotografije izvedenih projekata.
-                    </p>
+                </div>
+
+                <div class="gallery-filters" aria-label="Filtriranje galerije">
+                    <button type="button" class="gallery-filter-button is-active" data-filter="all">Sve</button>
+                    <button type="button" class="gallery-filter-button" data-filter="kuhinje">Kuhinje</button>
+                    <button type="button" class="gallery-filter-button" data-filter="dnevni">Dnevni boravci</button>
+                    <button type="button" class="gallery-filter-button" data-filter="ormari">Ormari</button>
+                    <button type="button" class="gallery-filter-button" data-filter="kupaonice">Kupaonice</button>
+                    <button type="button" class="gallery-filter-button" data-filter="poslovni">Poslovni prostori</button>
                 </div>
 
                 <div class="gallery-grid">
 
-					<a href="kuhinje-po-mjeri.html" class="gallery-link" aria-label="Pogledajte stranicu Kuhinje po mjeri">
+					<a href="kuhinje-po-mjeri.html" class="gallery-link" data-gallery-category="kuhinje" aria-label="Pogledajte stranicu Kuhinje po mjeri">
 						<figure class="gallery-card">
 							<img 
 								src="images/kuhinje/01_kuhinje.jpg" 
 								alt="Moderna kuhinja po mjeri u toplim drvenim tonovima"
 								loading="lazy"
 							>
-							<figcaption>Kuhinje po mjeri</figcaption>
+							<figcaption>Kuhinje po mjeri <span>Raspored, materijali i montaža</span></figcaption>
 						</figure>
 					</a>
 
-					<a href="dnevni-boravci.html" class="gallery-link" aria-label="Pogledajte stranicu Dnevni boravci">
+					<a href="dnevni-boravci.html" class="gallery-link" data-gallery-category="dnevni" aria-label="Pogledajte stranicu Dnevni boravci">
 						<figure class="gallery-card">
 							<img 
 								src="images/dnevniboravci/01_dnevniboravci.jpg" 
 								alt="Dnevni boravak s TV stijenom i namještajem po mjeri"
 								loading="lazy"
 							>
-							<figcaption>Dnevni boravci</figcaption>
+							<figcaption>Dnevni boravci <span>TV stijene, komode i police</span></figcaption>
 						</figure>
 					</a>
 
-					<a href="ugradbeni-ormari.html" class="gallery-link" aria-label="Pogledajte stranicu Ugradbeni ormari">
+					<a href="ugradbeni-ormari.html" class="gallery-link" data-gallery-category="ormari" aria-label="Pogledajte stranicu Ugradbeni ormari">
 						<figure class="gallery-card">
 							<img 
 								src="images/ormari/01_ormari.jpeg" 
 								alt="Ugradbeni ormar po mjeri s elegantnim frontama"
 								loading="lazy"
 							>
-							<figcaption>Ugradbeni ormari</figcaption>
+							<figcaption>Ugradbeni ormari <span>Pohrana po mjeri prostora</span></figcaption>
 						</figure>
 					</a>
 					
-					<a href="kupaonice.html" class="gallery-link" aria-label="Pogledajte stranicu Kupaonice">
+					<a href="kupaonice.html" class="gallery-link" data-gallery-category="kupaonice" aria-label="Pogledajte stranicu Kupaonice">
 						<figure class="gallery-card">
 							<img 
 								src="images/kupaonice/01_kupaonice.jpeg" 
 								alt="Kupaonski namještaj po mjeri s drvenim dekorom i umivaonikom"
 								loading="lazy"
 							>
-							<figcaption>Kupaonice</figcaption>
+							<figcaption>Kupaonice <span>Praktičan namještaj za vlagu i pohranu</span></figcaption>
 						</figure>
 					</a>
 
-					<a href="poslovni-prostori.html" class="gallery-link" aria-label="Pogledajte stranicu Poslovni prostori">
+					<a href="poslovni-prostori.html" class="gallery-link" data-gallery-category="poslovni" aria-label="Pogledajte stranicu Poslovni prostori">
 						<figure class="gallery-card">
 							<img 
 								src="images/poslovniprostori/01_poslovniprostori.jpeg" 
 								alt="Poslovni prostor opremljen namještajem po mjeri"
 								loading="lazy"
 							>
-							<figcaption>Poslovni prostori</figcaption>
+							<figcaption>Poslovni prostori <span>Uredi, saloni i recepcije</span></figcaption>
 						</figure>
 					</a>
 
@@ -833,13 +866,35 @@
 
 
         <!-- ŠTO NAM POSLATI ZA PONUDU -->
-        <section class="quote-prep section-padding">
+        <section id="ponuda" class="quote-prep section-padding">
             <div class="container quote-prep-grid">
                 <div>
-                    <p class="section-label">Priprema ponude</p>
-                    <h2>Što nam poslati za bržu ponudu?</h2>
-                    <p>Za početnu procjenu dovoljno je poslati osnovne informacije o prostoru i željama. Nakon toga možemo dogovoriti izmjeru i detaljniji prijedlog.</p>
-                </div>
+					<p class="section-label">Priprema ponude</p>
+
+					<h2>Što nam poslati za bržu ponudu?</h2>
+
+					<p>
+						Za početnu procjenu dovoljno je poslati osnovne informacije o prostoru i željama.
+						Nakon toga možemo dogovoriti izmjeru i detaljniji prijedlog.
+					</p>
+
+					<div class="quote-note">
+						<h3>Napomena o izradi ponude</h3>
+
+						<p>
+							Za detaljnu razradu ponude, izmjeru ili pripremu konkretnog prijedloga rješenja,
+							naknada se određuje prema veličini i složenosti projekta.
+						</p>
+
+						<p>
+							Kod većih projekata izrada detaljne ponude naplaćuje se od
+							<strong>50,00 €</strong>. Ako se odlučite za izradu namještaja kod nas,
+							taj se iznos uračunava u konačnu cijenu.
+						</p>
+
+						<a href="#kontakt" class="btn-primary quote-note-button">Pošaljite upit</a>
+					</div>
+				</div>
 
                 <div class="quote-checklist">
 
@@ -878,6 +933,23 @@
                             <p>Okvirni rok i budžet pomažu nam predložiti realno i izvedivo rješenje.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREMIUM POVJERENJE -->
+        <section class="premium-trust section-padding">
+            <div class="container premium-trust-grid">
+                <div>
+                    <p class="section-label">Detalji čine razliku</p>
+                    <h2>Materijali, okovi i izvedba biraju se prema prostoru i načinu korištenja.</h2>
+                    <p>U razgovoru prolazimo kroz željeni stil, navike korištenja, budžet i tehničke uvjete kako bi konačno rješenje bilo lijepo, dugotrajno i praktično za svakodnevicu.</p>
+                </div>
+                <div class="premium-trust-list">
+                    <span>Precizna izmjera</span>
+                    <span>3D prikaz po potrebi</span>
+                    <span>Usklađivanje materijala</span>
+                    <span>Izrada i montaža</span>
                 </div>
             </div>
         </section>
@@ -929,7 +1001,7 @@
                 </div>
 
                 <!-- Kontakt forma -->
-				<form class="contact-form" action="send-mail.php" method="post">
+				<form class="contact-form" action="send-mail.php" method="post" enctype="multipart/form-data">
 					<p class="form-note">
 						Pošaljite osnovne informacije o projektu, a mi ćemo vam se javiti s povratnim informacijama.
 					</p>
@@ -950,6 +1022,18 @@
 						<input type="email" id="email" name="email" placeholder="vasa@email.hr" required>
 					</div>
 
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon <span>(opcionalno)</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="npr. 098 943 8084">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Lokacija projekta <span>(opcionalno)</span></label>
+                            <input type="text" id="location" name="location" placeholder="npr. Zagreb, Sesvete, okolica">
+                        </div>
+                    </div>
+
 					<div class="form-group">
 						<label for="project-type">Vrsta projekta</label>
 
@@ -959,7 +1043,7 @@
 							<option value="dnevni-boravak">Dnevni boravak</option>
 							<option value="ormari">Ugradbeni ormari</option>
 							<option value="kupaonice">Kupaonice</option>
-							<option value="poslovni-prostor">Poslovni prostor</option>
+                            <option value="poslovni-prostor">Poslovni prostor</option>
 							<option value="3d-dizajn">3D dizajn interijera</option>
 							<option value="opremanje">Kompletno opremanje prostora</option>
 							<option value="ostalo">Ostalo</option>
@@ -971,7 +1055,12 @@
 						<textarea id="message" name="message" rows="6" placeholder="Opišite svoj projekt..." required></textarea>
 					</div>
 
-					<button type="submit" class="btn-primary">Pošalji upit</button>
+					<label class="form-consent">
+                        <input type="checkbox" name="privacy-consent" value="1" required>
+                        <span>Slažem se da se uneseni podaci koriste za odgovor na upit. Pročitao/la sam <a href="privatnost.html" target="_blank">Pravila privatnosti</a>.</span>
+                    </label>
+
+                    <button type="submit" class="btn-primary">Pošalji upit</button>
 
 					<p class="form-status-message" aria-live="polite"></p>
 				</form>
@@ -1062,6 +1151,29 @@
         window.addEventListener('load', function () {
             toggleHeaderBackground();
             toggleFloatingCall();
+        });
+
+
+        /* Filtriranje galerije na početnoj stranici */
+        const galleryFilterButtons = document.querySelectorAll('.gallery-filter-button');
+        const galleryFilterItems = document.querySelectorAll('.gallery-link[data-gallery-category]');
+
+        galleryFilterButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const filter = button.getAttribute('data-filter');
+
+                galleryFilterButtons.forEach(function (item) {
+                    item.classList.remove('is-active');
+                });
+
+                button.classList.add('is-active');
+
+                galleryFilterItems.forEach(function (item) {
+                    const category = item.getAttribute('data-gallery-category');
+                    const shouldShow = filter === 'all' || category === filter;
+                    item.classList.toggle('is-hidden', !shouldShow);
+                });
+            });
         });
     </script>
 
